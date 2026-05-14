@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Patitas Limpias</title>
+</head>
+<body>
+
+    <header>
+        <h1>ONG Patitas Limpias</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="programas.html">Programas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contactate con nosotros</h2>
+            <p>Si tenés un refugio o conocés a alguien que necesite nuestra ayuda, completá el siguiente formulario:</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                    
+                    <p>
+                        <label for="nombre">Nombre completo:</label><br>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
+                    </p>
+
+                    <p>
+                        <label for="email">Correo electrónico:</label><br>
+                        <input type="email" id="email" name="email" required placeholder="nombre@ejemplo.com">
+                    </p>
+
+                    <p>
+                        <label for="tipo_animal">¿Por qué tipo de animal consultás?</label><br>
+                        <select id="tipo_animal" name="tipo_animal">
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="otro">Otro / Varios</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu Mensaje</legend>
+                    <p>
+                        <label for="motivo">Motivo de la consulta:</label><br>
+                        <input type="radio" id="bano" name="motivo" value="bano">
+                        <label for="bano">Baño Solidario</label><br>
+                        
+                        <input type="radio" id="corte" name="motivo" value="corte">
+                        <label for="corte">Peluquería Sanitaria</label>
+                    </p>
+
+                    <p>
+                        <label for="mensaje">Detalles adicionales:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="5" cols="30" placeholder="Contanos brevemente la situación..."></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="novedades" name="novedades">
+                        <label for="novedades">Quiero recibir novedades por mail</label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Enviar mensaje</button>
+                    <button type="reset">Limpiar formulario</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Otras vías de contacto</h2>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:consultas@patitaslimpias.org">consultas@patitaslimpias.org</a></li>
+                <li><strong>Teléfono:</strong> <a href="tel:+541100000000">011 0000-0000</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Patitas Limpias - TMLW - UNAHUR</p>
+    </footer>
+
+</body>
+</html>
