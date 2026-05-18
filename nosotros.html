@@ -4,51 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Patitas Limpias</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <header>
+    <header class="header-principal">
         <h1>ONG Patitas Limpias</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
                 <li><a href="programas.html">Programas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main class="contenedor-nosotros">
+        <!-- Sección de presentación con estilo de "Hero" -->
+        <section class="banner-intro">
             <h2>¿Quiénes Somos?</h2>
-            <p>Somos un grupo de <strong>profesionales y voluntarios</strong> amantes de los animales que decidimos unirnos para mejorar la calidad de vida de las mascotas que más lo necesitan. Estamos en el barrio de González Catán.</p>
-            <p>Nacimos en el año 2024 como una respuesta a la falta de servicios de higiene accesibles para refugios del conurbano.</p>
+            <div class="texto-destacado">
+                <p>Somos un grupo de <strong>profesionales y voluntarios</strong> amantes de los animales que decidimos unirnos para mejorar la calidad de vida de las mascotas en González Catán.</p>
+                <p>Nacimos en 2024 como respuesta a la necesidad de servicios de higiene accesibles en el conurbano.</p>
+            </div>
         </section>
 
-        <section>
+        <!-- Sección de Equipo con diseño de tarjetas -->
+        <section class="equipo-seccion">
             <h2>Nuestro Equipo</h2>
-            <p>Contamos con la colaboración de:</p>
-            <ul>
-                <li>Veterinarios especializados en dermatología.</li>
-                <li>Peluqueros caninos profesionales.</li>
-                <li>Especialistas en comportamiento animal.</li>
-                <li>Voluntarios de logística y transporte.</li>
-            </ul>
+            <p class="subtitulo">El corazón de nuestra organización:</p>
+            <div class="grid-equipo">
+                <article class="tarjeta-equipo">
+                    <h3>Salud</h3>
+                    <p>Veterinarios especializados en dermatología.</p>
+                </article>
+                <article class="tarjeta-equipo">
+                    <h3>Estética</h3>
+                    <p>Peluqueros caninos profesionales.</p>
+                </article>
+                <article class="tarjeta-equipo">
+                    <h3>Bienestar</h3>
+                    <p>Especialistas en comportamiento animal.</p>
+                </article>
+                <article class="tarjeta-equipo">
+                    <h3>Apoyo</h3>
+                    <p>Voluntarios de logística y transporte.</p>
+                </article>
+            </div>
         </section>
 
-        <section>
-            <h2>Valores de la Organización</h2>
-            <dl>
-                <dt>Bienestar Animal</dt>
-                <dd>Garantizamos un trato digno y sin estrés durante todos nuestros procesos de baño y corte.</dd>
-                
-                <dt>Compromiso Social</dt>
-                <dd>Trabajamos codo a codo con familias de bajos recursos para que la higiene no sea un privilegio.</dd>
-                
-                <dt>Transparencia</dt>
-                <dd>Rendimos cuentas de cada donación recibida y cada servicio prestado.</dd>
-            </dl>
+        <!-- Sección de Valores con cajas modernas -->
+        <section class="valores-seccion">
+            <h2>Nuestros Valores</h2>
+            <div class="flex-valores">
+                <div class="valor-caja">
+                    <span class="icono">🐾</span>
+                    <h3>Bienestar Animal</h3>
+                    <p>Trato digno y sin estrés en cada proceso.</p>
+                </div>
+                <div class="valor-caja">
+                    <span class="icono">🤝</span>
+                    <h3>Compromiso Social</h3>
+                    <p>Higiene como un derecho, no un privilegio.</p>
+                </div>
+                <div class="valor-caja">
+                    <span class="icono">✨</span>
+                    <h3>Transparencia</h3>
+                    <p>Rendición de cuentas clara y honesta.</p>
+                </div>
+            </div>
+            <div class="accion-nosotros">
+                <a href="contacto.html" class="boton-moderno">¡Sumate como voluntario!</a>
+            </div>
         </section>
     </main>
 

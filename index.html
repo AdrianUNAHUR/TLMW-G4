@@ -7,55 +7,95 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <h1>ONG Patitas Limpias</h1>
-            <p>Higiene es Salud Animal</p>
+    <header class="header-principal">
+        <div class="contenedor header-flex">
+            <div class="logo-container">
+                <h1>ONG Patitas Limpias</h1>
+                <p>Higiene es Salud Animal</p>
+            </div>
+            <nav aria-label="Menú principal">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="programas.html">Programas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="programas.html">Programas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <h2>Transformando vidas a través del cuidado</h2>
-            <p>En <strong>Patitas Limpias</strong> creemos que la higiene es salud. Trabajamos para que ningún animal sufra por falta de cuidados estéticos básicos, previniendo infecciones y mejorando su bienestar emocional.</p>
-        </section>
-
-        <section id="noticias">
-            <h2>Últimas Novedades</h2>
-            <div class="contenedor-articulos">
-                <article>
-                    <h3>Campaña de Verano: Corte Sanitario</h3>
-                    <p>Iniciamos nuestra jornada intensiva para perros de pelo largo, evitando golpes de calor en refugios del conurbano.</p>
-                    <time datetime="2026-05-15">15 de Mayo, 2026</time>
-                </article>
-                <article>
-                    <h3>Nuevo Móvil de Baño</h3>
-                    <p>Gracias a las donaciones, estrenamos una unidad móvil para llegar a los barrios más alejados de Hurlingham.</p>
-                    <time datetime="2026-05-10">10 de Mayo, 2026</time>
-                </article>
+        <!-- Sección Hero con Call to Action -->
+        <section id="hero" class="hero-seccion">
+            <div class="contenedor hero-contenido">
+                <h2>Transformando vidas a través del cuidado</h2>
+                <p>En <strong>Patitas Limpias</strong> creemos que la higiene es salud. Prevenimos infecciones y mejoramos el bienestar emocional de animales en situación de vulnerabilidad.</p>
+                <div class="hero-botones">
+                    <a href="programas.html" class="boton boton-primario">Ver Programas</a>
+                    <a href="contacto.html" class="boton boton-secundario">Quiero Ayudar</a>
+                </div>
             </div>
         </section>
 
-        <section id="que-hacemos">
-            <h2>Nuestros Pilares</h2>
+        <!-- Estadísticas de Impacto (Innovación) -->
+        <section id="impacto" class="contenedor">
+            <h2 class="titulo-centrado">Nuestro Impacto en 2024</h2>
+            <div class="flex-impacto">
+                <dl class="impacto-item">
+                    <dt>+500</dt>
+                    <dd>Animales bañados</dd>
+                </dl>
+                <dl class="impacto-item">
+                    <dt>120</dt>
+                    <dd>Rescatados con corte sanitario</dd>
+                </dl>
+                <dl class="impacto-item">
+                    <dt>15</dt>
+                    <dd>Barrios recorridos</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section id="noticias" class="fondo-claro">
+            <div class="contenedor">
+                <h2 class="titulo-centrado">Últimas Novedades</h2>
+                <div class="grid-articulos">
+                    <article class="tarjeta-noticia">
+                        <figure>
+                            <img src="img/campaña-verano.jpg" alt="Perro recibiendo corte de pelo">
+                            <figcaption>Jornada de peluquería ética</figcaption>
+                        </figure>
+                        <h3>Campaña de Verano: Corte Sanitario</h3>
+                        <p>Iniciamos nuestra jornada intensiva para evitar golpes de calor en refugios del conurbano.</p>
+                        <time datetime="2026-05-15">15 de Mayo, 2026</time>
+                    </article>
+                    <article class="tarjeta-noticia">
+                        <figure>
+                            <img src="img/movil-bano.jpg" alt="Unidad móvil de Patitas Limpias">
+                        </figure>
+                        <h3>Nuevo Móvil de Baño</h3>
+                        <p>Gracias a las donaciones, estrenamos una unidad móvil para llegar a los barrios más alejados de Hurlingham.</p>
+                        <time datetime="2026-05-10">10 de Mayo, 2026</time>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="que-hacemos" class="contenedor">
+            <h2 class="titulo-centrado">Nuestros Pilares</h2>
             <div class="flex-container">
                 <div class="card">
+                    <span class="icono">🧼</span>
                     <h3>Baño Terapéutico</h3>
                     <p>Uso de productos medicados para pieles sensibles o con dermatitis.</p>
                 </div>
                 <div class="card">
+                    <span class="icono">✂️</span>
                     <h3>Peluquería Ética</h3>
-                    <p>Cortes realizados con paciencia, sin bozal y respetando los tiempos del animal.</p>
+                    <p>Cortes realizados con paciencia, respetando los tiempos del animal.</p>
                 </div>
                 <div class="card">
+                    <span class="icono">📚</span>
                     <h3>Educación</h3>
                     <p>Charlas sobre cómo detectar parásitos y cuidar el manto en casa.</p>
                 </div>
@@ -64,12 +104,17 @@
     </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="contenedor footer-grid">
             <address>
-                <strong>Sede Central:</strong> Calle Ficticia 123, Hurlingham.<br>
-                <strong>Email:</strong> <a href="mailto:info@patitaslimpias.org">info@patitaslimpias.org</a>
+                <strong>Sede Central:</strong><br>
+                Calle Ficticia 123, Hurlingham.<br>
+                Email: <a href="mailto:info@patitaslimpias.org">info@patitaslimpias.org</a><br>
+                Tel: <a href="tel:+541100000000">011 0000-0000</a>
             </address>
-            <p>&copy; 2026 Patitas Limpias - Trabajo Práctico TLMW - UNAHUR</p>
+            <div class="copyright">
+                <p>&copy; 2026 Patitas Limpias - Taller de Marcado - UNAHUR</p>
+                <p><small>Construido por Adrián Nápoli</small></p>
+            </div>
         </div>
     </footer>
 </body>
