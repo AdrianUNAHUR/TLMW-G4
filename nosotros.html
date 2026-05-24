@@ -4,91 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Patitas Limpias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <header class="header-principal">
-            <h1>ONG "Patitas Limpias"</h1>
-            <p>Higiene es Salud para nuestras mascotas</p>       
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html" class="active">Nosotros</a></li>
-                <li><a href="programas.html">Programas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="header-principal sticky-nav">
+        <div class="contenedor header-flex">
+            <div class="logo-container">
+                <h1>ONG <span>Patitas Limpias</span></h1>
+                <p>Higiene es Salud para nuestras mascotas</p>      
+            </div>
+            <nav aria-label="Menú principal">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="animated-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="active animated-link">Nosotros</a></li>
+                    <li><a href="programas.html" class="animated-link">Programas</a></li>
+                    <li><a href="contacto.html" class="animated-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="contenedor-nosotros">
-        <!-- Sección de presentación con estilo de "Hero" -->
-        <section class="banner-intro">
-            <h2>¿Quiénes Somos?</h2>
-            <div class="texto-destacado">
+    <main class="seccion-padding">
+        
+        <section class="banner-intro contenedor">
+            <h2 class="titulo-centrado">¿Quiénes Somos?</h2>
+            <div class="texto-destacado-nosotros">
                 <p>Somos un grupo de <strong>profesionales y voluntarios</strong> amantes de los animales que decidimos unirnos para mejorar la calidad de vida de las mascotas en González Catán.</p>
-                <p>Nacimos en 2024 como respuesta a la necesidad de servicios de higiene accesibles en el conurbano.</p>
+                <p>Nacimos en 2024 como respuesta directa a la necesidad crítica de servicios de higiene accesibles en el conurbano bonaerense.</p>
             </div>
         </section>
 
-        <!-- Sección de Equipo con diseño de tarjetas -->
-        <section class="equipo-seccion">
-            <h2>Nuestro Equipo</h2>
-            <p class="subtitulo">El corazón de nuestra organización:</p>
-            <div class="grid-equipo">
-                <article class="tarjeta-equipo">
-                    <h3>Salud</h3>
-                    <p>Veterinarios especializados en dermatología.</p>
-                </article>
-                <article class="tarjeta-equipo">
-                    <h3>Estética</h3>
-                    <p>Peluqueros caninos profesionales.</p>
-                </article>
-                <article class="tarjeta-equipo">
-                    <h3>Bienestar</h3>
-                    <p>Especialistas en comportamiento animal.</p>
-                </article>
-                <article class="tarjeta-equipo">
-                    <h3>Apoyo</h3>
-                    <p>Voluntarios de logística y transporte.</p>
-                </article>
+        <section class="equipo-seccion fondo-claro seccion-padding-interna">
+            <div class="contenedor">
+                <h2 class="titulo-centrado">Nuestro Equipo</h2>
+                <p class="subtitulo-centrado">El corazón e infraestructura de nuestra organización:</p>
+                
+                <div class="grid-equipo">
+                    
+                    <article class="tarjeta-equipo relative-card">
+                        <span class="badge-profesional">Área Salud</span>
+                        <div class="avatar-decorativo">🩺</div>
+                        <h3>Especialistas Médicos</h3>
+                        <p>Veterinarios colegiados especializados en dermatología animal y control epidemiológico.</p>
+                    </article>
+
+                    <article class="tarjeta-equipo relative-card">
+                        <span class="badge-profesional">Área Estética</span>
+                        <div class="avatar-decorativo">✂️</div>
+                        <h3>Peluquería Canina</h3>
+                        <p>Estilistas y peluqueros caninos profesionales capacitados en manejo técnico sin estrés.</p>
+                    </article>
+
+                    <article class="tarjeta-equipo relative-card">
+                        <span class="badge-profesional">Área Bienestar</span>
+                        <div class="avatar-decorativo">🧠</div>
+                        <h3>Etología y Conducta</h3>
+                        <p>Especialistas en comportamiento animal encargados de garantizar procesos armoniosos.</p>
+                    </article>
+
+                    <article class="tarjeta-equipo relative-card">
+                        <span class="badge-profesional">Área Apoyo</span>
+                        <div class="avatar-decorativo">🚚</div>
+                        <h3>Logística y Traslado</h3>
+                        <p>Cuerpo operativo de voluntarios dedicados a la distribución y transporte de unidades móviles.</p>
+                    </article>
+
+                </div>
             </div>
         </section>
 
-        <!-- Sección de Valores con cajas modernas -->
-        <section class="valores-seccion">
-            <h2>Nuestros Valores</h2>
+        <section class="valores-seccion contenedor seccion-padding-interna">
+            <h2 class="titulo-centrado">Nuestros Valores</h2>
+            
             <div class="flex-valores">
-                <div class="valor-caja">
-                    <span class="icono">🐾</span>
+                <div class="valor-caja card-interactiva">
+                    <span class="icono-flotante">🐾</span>
                     <h3>Bienestar Animal</h3>
-                    <p>Trato digno y sin estrés en cada proceso.</p>
+                    <p>Trato digno, empático y libre de estrés instrumental en cada proceso de baño.</p>
                 </div>
-                <div class="valor-caja">
-                    <span class="icono">🤝</span>
+                <div class="valor-caja card-interactiva">
+                    <span class="icono-flotante">🤝</span>
                     <h3>Compromiso Social</h3>
-                    <p>Higiene como un derecho, no un privilegio.</p>
+                    <p>Defendemos la higiene preventiva como un derecho fundamental de la salud comunitaria.</p>
                 </div>
-                <div class="valor-caja">
-                    <span class="icono">✨</span>
+                <div class="valor-caja card-interactiva">
+                    <span class="icono-flotante">✨</span>
                     <h3>Transparencia</h3>
-                    <p>Rendición de cuentas clara y honesta.</p>
+                    <p>Rendición de cuentas clara, honesta y abierta a todos nuestros donantes y comunidad.</p>
                 </div>
             </div>
+            
             <div class="accion-nosotros">
-                <a href="contacto.html" class="boton-moderno">¡Sumate como voluntario!</a>
+                <a href="contacto.html" class="boton boton-primario pulse-effect">¡Sumate como voluntario!</a>
             </div>
         </section>
-        <iframe width="400" height="200" src="https://www.youtube.com/embed/pZshWrz65l8" title="YouTube video" frameborder="2" allowfullscreen>
-        </iframe>
+
+        <section class="contenedor video-seccion-container">
+            <h3 class="subtitulo-video">Conocé nuestras jornadas en acción</h3>
+            <div class="video-responsivo-contenedor">
+                <iframe src="https://www.youtube.com/embed/pZshWrz65l8" title="YouTube video: Jornada Patitas Limpias" allowfullscreen></iframe>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <address>
-            Encontranos en: Calle Origone 123, Hurlingham. <br>
-            Teléfono: <a href="tel:+541122223333">011 2222-3333</a>
-        </address>
-        <p>&copy; 2026 Patitas Limpias - TLMW - UNAHUR</p>
+        <div class="contenedor footer-grid">
+            <address class="footer-direccion">
+                <strong>Sede Central:</strong><br>
+                Calle Origone 123, Hurlingham.<br>
+                Teléfono: <a href="tel:+541122223333" class="footer-link">011 2222-3333</a>
+            </address>
+            <div class="copyright">
+                <p>&copy; 2026 <strong>Patitas Limpias</strong> - Taller de Marcado - UNAHUR</p>
+                <p><small>Diseño Innovador por Adrián Nápoli</small></p>
+            </div>
+        </div>
     </footer>
 
 </body>

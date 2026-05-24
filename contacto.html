@@ -4,97 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Patitas Limpias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <header>
-        <h1>ONG "Patitas Limpias"</h1>
-        <p>Higiene es Salud para nuestras mascotas</p>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="programas.html">Programas</a></li>
-                <li><a href="contacto.html" class="active">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="header-principal sticky-nav">
+        <div class="contenedor header-flex">
+            <div class="logo-container">
+                <h1>ONG <span>Patitas Limpias</span></h1>
+                <p>Higiene es Salud para nuestras mascotas</p>
+            </div>
+            <nav aria-label="Menú principal">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="animated-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="animated-link">Nosotros</a></li>
+                    <li><a href="programas.html" class="animated-link">Programas</a></li>
+                    <li><a href="contacto.html" class="active animated-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main class="contenedor">
-        <section class="tarjeta-grande">
-            <h2>Contactate con nosotros</h2>
-            <p>Si tenés un refugio o conocés a alguien que necesite nuestra ayuda, completá el siguiente formulario:</p>
+    <main class="seccion-padding">
+        <div class="contenedor layout-contacto-grid">
+            
+            <section class="tarjeta-grande-formulario">
+                <h2 class="titulo-formulario">Contactate con nosotros</h2>
+                <p class="descripcion-formulario">Si tenés un refugio, rescataste un animal o conocés a una familia que necesite de nuestra ayuda, completá el formulario para coordinar una jornada operativa:</p>
 
-            <form action="#" method="post" class="formulario-estilizado">
-                <fieldset>
-                    <legend>Datos Personales</legend>
+                <form action="#" method="post" class="formulario-estilizado">
                     
-                    <div class="campo">
-                        <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez">
-                    </div>
-
-                    <div class="campo">
-                        <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" name="email" required placeholder="nombre@ejemplo.com">
-                    </div>
-
-                    <div class="campo">
-                        <label for="tipo_animal">¿Por qué tipo de animal consultás?</label>
-                        <select id="tipo_animal" name="tipo_animal">
-                            <option value="perro">Perro</option>
-                            <option value="gato">Gato</option>
-                            <option value="otro">Otro / Varios</option>
-                        </select>
-                    </div>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Tu Mensaje</legend>
-                    <div class="campo">
-                        <label>Motivo de la consulta:</label>
-                        <div class="opciones-radio">
-                            <input type="radio" id="bano" name="motivo" value="bano">
-                            <label for="bano">Baño Solidario</label>
+                    <fieldset class="fieldset-formulario">
+                        <legend class="legend-formulario">Datos Personales</legend>
+                        
+                        <div class="campo-bloque">
+                            <label for="nombre" class="label-formulario">Nombre completo:</label>
+                            <input type="text" id="nombre" name="nombre" class="input-formulario" required placeholder="Ej: Juan Pérez">
                         </div>
-                        <div class="opciones-radio">
-                            <input type="radio" id="corte" name="motivo" value="corte">
-                            <label for="corte">Peluquería Sanitaria</label>
+
+                        <div class="campo-bloque">
+                            <label for="email" class="label-formulario">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" class="input-formulario" required placeholder="nombre@ejemplo.com">
                         </div>
-                    </div>
 
-                    <div class="campo">
-                        <label for="mensaje">Detalles adicionales:</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos brevemente la situación..."></textarea>
-                    </div>
+                        <div class="campo-bloque">
+                            <label for="tipo_animal" class="label-formulario">¿Por qué tipo de animal consultás?</label>
+                            <div class="select-personalizado-contenedor">
+                                <select id="tipo_animal" name="tipo_animal" class="select-formulario">
+                                    <option value="perro">🐶 Perro</option>
+                                    <option value="gato">🐱 Gato</option>
+                                    <option value="otro">🐾 Otro / Varios animales</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
 
-                    <div class="campo-checkbox">
-                        <input type="checkbox" id="novedades" name="novedades">
-                        <label for="novedades">Quiero recibir novedades por mail</label>
-                    </div>
-                </fieldset>
+                    <fieldset class="fieldset-formulario">
+                        <legend class="legend-formulario">Tu Mensaje</legend>
+                        
+                        <div class="campo-bloque">
+                            <label class="label-formulario">Motivo preferente de la consulta:</label>
+                            
+                            <div class="flex-radios-contenedor">
+                                <div class="opciones-radio-item">
+                                    <input type="radio" id="bano" name="motivo" value="bano" class="radio-formulario" checked>
+                                    <label for="bano" class="label-radio-checkbox">🧼 Baño Solidario</label>
+                                </div>
+                                <div class="opciones-radio-item">
+                                    <input type="radio" id="corte" name="motivo" value="corte" class="radio-formulario">
+                                    <label for="corte" class="label-radio-checkbox">✂️ Peluquería Sanitaria</label>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="acciones-formulario">
-                    <button type="submit" class="boton boton-primario">Enviar mensaje</button>
-                    <button type="reset" class="boton boton-secundario">Limpiar formulario</button>
+                        <div class="campo-bloque">
+                            <label for="mensaje" class="label-formulario">Detalles adicionales de la situación:</label>
+                            <textarea id="mensaje" name="mensaje" class="textarea-formulario" rows="5" placeholder="Contanos brevemente cuántos animales son, el estado de su pelaje o si presentan dermatitis..."></textarea>
+                        </div>
+
+                        <div class="campo-checkbox-bloque">
+                            <input type="checkbox" id="novedades" name="novedades" class="checkbox-formulario">
+                            <label for="novedades" class="label-radio-checkbox">📩 Quiero recibir convocatorias y novedades en mi mail</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="acciones-formulario-flex">
+                        <button type="submit" class="boton boton-primario pulse-effect">Enviar mensaje</button>
+                        <button type="reset" class="boton boton-secundario">Limpiar campos</button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="info-contacto-sidebar">
+                <div class="tarjeta-lateral relative-card">
+                    <h3>Otras vías de contacto</h3>
+                    <p class="subtexto-lateral">Si necesitás comunicarte de forma inmediata por emergencias operativas o donaciones urgentes de insumos:</p>
+                    
+                    <ul class="lista-contacto-side">
+                        <li>
+                            <span class="icono-lista-side">✉️</span>
+                            <div class="datos-lista-side">
+                                <strong>Email Institucional</strong>
+                                <a href="mailto:consultas@patitaslimpias.org">consultas@patitaslimpias.org</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icono-lista-side">📞</span>
+                            <div class="datos-lista-side">
+                                <strong>Atención Telefónica</strong>
+                                <a href="tel:+541100000000">011 0000-0000</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icono-lista-side">⏰</span>
+                            <div class="datos-lista-side">
+                                <strong>Horarios de Recepción</strong>
+                                <span>Lunes a Viernes de 9:00 a 17:00 hs.</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </form>
-        </section>
-
-        <section class="info-contacto-grid">
-            <div class="tarjeta">
-                <h3>Otras vías de contacto</h3>
-                <ul class="lista-limpia">
-                    <li><strong>Email:</strong> <a href="mailto:consultas@patitaslimpias.org">consultas@patitaslimpias.org</a></li>
-                    <li><strong>Teléfono:</strong> <a href="tel:+541100000000">011 0000-0000</a></li>
-                </ul>
-            </div>
-        </section>
+            </aside>
+            
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Patitas Limpias - TMLW - UNAHUR</p>
+        <div class="contenedor footer-grid">
+            <div class="footer-direccion">
+                <p>&copy; 2026 <strong>Patitas Limpias</strong> - Taller de Maquetado Web - UNAHUR</p>
+            </div>
+            <div class="copyright">
+                <p><small>Diseño Innovador por Adrián Nápoli</small></p>
+            </div>
+        </div>
     </footer>
 
 </body>

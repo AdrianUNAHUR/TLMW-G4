@@ -4,121 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patitas Limpias - Cuidado Animal con Amor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header class="header-principal">
+    <header class="header-principal sticky-nav">
         <div class="contenedor header-flex">
             <div class="logo-container">
-                <h1>ONG "Patitas Limpias"</h1>
+                <h1>ONG <span>Patitas Limpias</span></h1>
                 <p>Higiene es Salud para nuestras mascotas</p>
             </div>
             <nav aria-label="Menú principal">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="programas.html">Programas</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="index.html" class="active animated-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="animated-link">Nosotros</a></li>
+                    <li><a href="programas.html" class="animated-link">Programas</a></li>
+                    <li><a href="contacto.html" class="animated-link">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Sección Hero con Call to Action -->
         <section id="hero" class="hero-seccion">
             <div class="contenedor hero-contenido">
-                <h2>Transformando vidas a través del cuidado</h2>
+                <h2 class="bounce-text">Transformando vidas a través del cuidado</h2>
                 <p>En <strong>Patitas Limpias</strong> creemos que la higiene es salud. Prevenimos infecciones y mejoramos el bienestar emocional de animales en situación de vulnerabilidad.</p>
                 <div class="hero-botones">
-                    <a href="programas.html" class="boton boton-primario">Ver Programas</a>
+                    <a href="programas.html" class="boton boton-primario pulse-effect">Ver Programas</a>
                     <a href="contacto.html" class="boton boton-secundario">Quiero Ayudar</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Estadísticas de Impacto (Innovación) -->
-        <section id="impacto" class="contenedor">
-            <h2 class="titulo-centrado">Nuestro Impacto en 2024</h2>
-            <div class="flex-impacto">
-                <dl class="impacto-item">
-                    <dt>+500</dt>
-                    <dd>Animales bañados</dd>
-                </dl>
-                <dl class="impacto-item">
-                    <dt>120</dt>
-                    <dd>Rescatados con corte sanitario</dd>
-                </dl>
-                <dl class="impacto-item">
-                    <dt>15</dt>
-                    <dd>Barrios recorridos</dd>
-                </dl>
+            <div class="custom-shape-divider">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
             </div>
         </section>
 
-        <section id="noticias" class="fondo-claro">
+        <section id="impacto" class="contenedor seccion-padding">
+            <h2 class="titulo-centrado">Nuestro Impacto en 2024</h2>
+            <div class="flex-impacto">
+                <div class="impacto-item">
+                    <div class="impacto-circulo">
+                        <span class="numero">+500</span>
+                    </div>
+                    <p class="descripcion-impacto">Animales bañados</p>
+                </div>
+                <div class="impacto-item">
+                    <div class="impacto-circulo">
+                        <span class="numero">120</span>
+                    </div>
+                    <p class="descripcion-impacto">Rescatados con corte sanitario</p>
+                </div>
+                <div class="impacto-item">
+                    <div class="impacto-circulo">
+                        <span class="numero">15</span>
+                    </div>
+                    <p class="descripcion-impacto">Barrios recorridos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias" class="fondo-claro seccion-padding">
             <div class="contenedor">
                 <h2 class="titulo-centrado">Últimas Novedades</h2>
                 <div class="grid-articulos">
-                    <article class="tarjeta-noticia">
-                        <figure>
-                            <img src="img/huella.jpg" alt="Perro recibiendo corte de pelo">
-                            <figcaption>Jornada de peluquería ética</figcaption>
-                        </figure>
-                        <h3>Campaña de Verano: Corte Sanitario</h3>
-                        <p>Iniciamos nuestra jornada intensiva para evitar golpes de calor en refugios del conurbano.</p>
-                        <time datetime="2026-05-15">15 de Mayo, 2026</time>
+                    
+                    <article class="tarjeta-noticia relative-card">
+                        <span class="badge badge-urgente">¡Urgente!</span>
+                        <div class="contenedor-multimedia">
+                            <div class="overlay-play"><span>▶ Ver Video</span></div>
+                            <img src="img/huella.jpg" alt="Perro recibiendo corte de pelo" class="img-zoom">
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <time datetime="2026-05-15" class="time-tag">15 de Mayo, 2026</time>
+                            <h3>Campaña de Verano: Corte Sanitario</h3>
+                            <p>Iniciamos nuestra jornada intensiva para evitar golpes de calor en refugios del conurbano.</p>
+                        </div>
                     </article>
-                    <article class="tarjeta-noticia">
-                        <figure>
-                            <img src="img/perro1.jpg" alt="Unidad móvil de Patitas Limpias">
-                        </figure>
-                        <h3>Nuevo Móvil de Baño</h3>
-                        <p>Gracias a las donaciones, estrenamos una unidad móvil para llegar a los barrios más alejados de Hurlingham.</p>
-                        <time datetime="2026-05-10">10 de Mayo, 2026</time>
+
+                    <article class="tarjeta-noticia relative-card">
+                        <span class="badge badge-nuevo">¡Nuevo!</span>
+                        <div class="contenedor-multimedia">
+                            <div class="overlay-play"><span>📷 Galería GIF</span></div>
+                            <img src="img/perro1.jpg" alt="Unidad móvil de Patitas Limpias" class="img-zoom">
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <time datetime="2026-05-10" class="time-tag">10 de Mayo, 2026</time>
+                            <h3>Nuevo Móvil de Baño</h3>
+                            <p>Gracias a las donaciones, estrenamos una unidad móvil para llegar a los barrios más alejados de Hurlingham.</p>
+                        </div>
                     </article>
+
                 </div>
             </div>
         </section>
 
-        <section id="que-hacemos" class="contenedor">
+        <section id="que-hacemos" class="contenedor seccion-padding">
             <h2 class="titulo-centrado">Nuestros Pilares</h2>
             <div class="flex-container">
-                <div class="card">
-                    <span class="icono">🧼</span>
+                
+                <div class="card card-interactiva">
+                    <div class="icono-flotante">🧼</div>
                     <h3>Baño Terapéutico</h3>
                     <p>Uso de productos medicados para pieles sensibles o con dermatitis.</p>
-                    <p>Minimizamos el ruido ambiente y también el de los dispositivos eléctricos.</p>
+                    <p><small class="texto-secundario">Minimizamos el ruido ambiente y el estrés instrumental.</small></p>
+                </div>
 
-                </div>
-                <div class="card">
-                    <span class="icono">✂️</span>
+                <div class="card card-interactiva">
+                    <div class="icono-flotante">✂️</div>
                     <h3>Peluquería Ética</h3>
-                    <p>Cortes realizados con paciencia, respetando los tiempos del animal.</p>
-                    <p>Respetamos el corte de la raza, y lo hacemos de acuerdo a indicaciones precisas.</p>
+                    <p>Cortes realizados con paciencia, respetando estrictamente los tiempos del animal.</p>
+                    <p><small class="texto-secundario">Respetamos las características del manto según indicaciones precisas.</small></p>
                 </div>
-                <div class="card">
-                    <span class="icono">📚</span>
-                    <h3>Educación</h3>
-                    <p>Charlas sobre cómo detectar parásitos y cuidar el manto en casa.</p>
-                    <p>Capacitaciones sobre cómo enseñar a tu mascota.</p>
-                    <p>Talleres sobre alimentación y alimentos balanceados.</p>
+
+                <div class="card card-interactiva">
+                    <div class="icono-flotante">📚</div>
+                    <h3>Educación y Talleres</h3>
+                    <p>Charlas sobre cómo detectar parásitos, cuidar la salud capilar e higiene en casa.</p>
+                    <p><small class="texto-secundario">Capacitaciones sobre etología, alimentación integral y balanceados.</small></p>
                 </div>
+
             </div>
         </section>
     </main>
 
     <footer>
         <div class="contenedor footer-grid">
-            <address>
+            <address class="footer-direccion">
                 <strong>Sede Central:</strong><br>
                 Calle Ficticia 123, Hurlingham.<br>
-                Email: <a href="mailto:info@patitaslimpias.org">info@patitaslimpias.org</a><br>
-                Tel: <a href="tel:+541100000000">011 0000-0000</a>
+                Email: <a href="mailto:info@patitaslimpias.org" class="footer-link">info@patitaslimpias.org</a><br>
+                Tel: <a href="tel:+541100000000" class="footer-link">011 0000-0000</a>
             </address>
             <div class="copyright">
-                <p>&copy; 2026 Patitas Limpias - Taller de Marcado - UNAHUR</p>
-                <p><small>Construido por Adrián Nápoli</small></p>
+                <p>&copy; 2026 <strong>Patitas Limpias</strong> - Taller de Marcado - UNAHUR</p>
+                <p><small>Diseño Innovador por Adrián Nápoli</small></p>
             </div>
         </div>
     </footer>

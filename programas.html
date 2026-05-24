@@ -4,84 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programas - Patitas Limpias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <h1>ONG "Patitas Limpias"</h1>
-        <p>Higiene es Salud para nuestras mascotas</p>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="programas.html" class="active">Programas</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+
+    <header class="header-principal sticky-nav">
+        <div class="contenedor header-flex">
+            <div class="logo-container">
+                <h1>ONG <span>Patitas Limpias</span></h1>
+                <p>Higiene es Salud para nuestras mascotas</p>
+            </div>
+            <nav aria-label="Menú principal">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="animated-link">Inicio</a></li>
+                    <li><a href="nosotros.html" class="animated-link">Nosotros</a></li>
+                    <li><a href="programas.html" class="active animated-link">Programas</a></li>
+                    <li><a href="contacto.html" class="animated-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="seccion-padding">
+        
         <section class="contenedor">
-            <h2>Nuestros Programas de Cuidado</h2>
-            <p>Brindamos servicios esenciales para garantizar la salud de los animales domésticos.</p>
+            <h2 class="titulo-centrado">Nuestros Programas de Cuidado</h2>
+            <p class="subtitulo-centrado">Brindamos servicios esenciales para garantizar la salud de los animales domésticos.</p>
             
-            <!-- Cuadros o Cards -->
             <div class="grid-programas">
-                <article class="tarjeta">
+                
+                <article class="tarjeta-programa relative-card">
+                    <span class="badge-programa badge-primario-tags">Inscripción Abierta</span>
+                    <div class="tarjeta-programa-icono">🧼</div>
                     <h3>Baño Solidario</h3>
-                    <p>Servicio de higiene para perros y gatos de familias en situación de vulnerabilidad.</p>
-                    <a href="#" class="boton">Saber más</a>
+                    <p>Servicio integral de higiene, cepillado y acondicionamiento del manto para perros y gatos de familias en situación de vulnerabilidad social.</p>
+                    <div class="tarjeta-programa-footer">
+                        <a href="contacto.html" class="boton boton-primario">Saber más</a>
+                    </div>
                 </article>
 
-                <article class="tarjeta">
+                <article class="tarjeta-programa relative-card">
+                    <span class="badge-programa badge-acento-tags">Prioritario</span>
+                    <div class="tarjeta-programa-icono">✂️</div>
                     <h3>Corte de Rescatados</h3>
-                    <p>Peluquería sanitaria para animales que acaban de ser sacados de la calle o refugios.</p>
-                    <a href="#" class="boton">Saber más</a>
+                    <p>Peluquería sanitaria especializada, remoción de nudos extremos y desparasitación externa para animales que acaban de ser retirados de la vía pública o de refugios zonales.</p>
+                    <div class="tarjeta-programa-footer">
+                        <a href="contacto.html" class="boton boton-primario">Saber más</a>
+                    </div>
                 </article>
+
             </div>
         </section>
 
-        <section class="contenedor">
-            <h2>Estadísticas de Impacto</h2>
-            <p>A continuación se detalla el trabajo realizado durante el último año:</p>
-            
-            <table class="tabla-estilo">
-                <thead>
-                    <tr>
-                        <th scope="col">Programa</th>
-                        <th scope="col">Animales Atendidos</th>
-                        <th scope="col">Frecuencia</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Baño Solidario</th>
-                        <td>150</td>
-                        <td>Semanal</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Corte de Rescatados</th>
-                        <td>85</td>
-                        <td>Mensual</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Talleres de Higiene</th>
-                        <td>40</td>
-                        <td>Bimensual</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th scope="row">Total Anual</th>
-                        <td colspan="2">275 animales beneficiados</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Patitas Limpias - TLMW - UNAHUR</p>
-    </footer>
-</body>
-</html>
+        <section class="fondo-claro seccion-padding-interna contenedor-tabla-seccion">
+            <div class="contenedor">
+                <h2 class="titulo-centrado">Estadísticas de Impacto</h2>
+                <p class="subtitulo-centrado">A continuación se detalla el trabajo de campo e higiénico realizado durante el último ciclo operativo:</p>
+                
+                <div class="tabla-responsiva-contenedor">
+                    <table class="tabla-estilo">
+                        <thead>
+                            <tr>
+                                <th scope="col">Programa Activo</th>
+                                <th scope="col">Animales Atendidos</th>
+                                <th scope="col">Frecuencia de Operación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">🔹 Baño Solidario</th>
+                                <td>150 ejemplares</td>
+                                <td><span class="tag-tabla tag-semanal">Semanal</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">🔹 Corte de Rescatados</th>
+                                <td>85 ejemplares</td>
+                                <td><span class="tag-tabla tag-mensual">Mensual</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">🔹 Talleres de Higiene</th>
+                                <td>40 ejemplares</td>
+                                <td><span class="tag-

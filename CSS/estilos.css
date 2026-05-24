@@ -1,331 +1,1115 @@
-/* Variables de color basadas en una paleta profesional */
+/* ==========================================================================
+   1. VARIABLES DE ENTORNO Y PALETA DE COLORES (Clase 7)
+   ========================================================================== */
 :root {
-    --primario: #342c5d;    /* Verde Petróleo */
-    --acento: #e67e22;      /* Naranja para botones */
-    --fondo-gris: #a2b7cd;  /* Gris muy claro */
-    --blanco: #ffffff;
-    --texto: #011b22;
+    /* Colores base amigables (tonos agua, burbujas y suavidad) */
+    --color-primario: #3a86ff;      /* Azul brillante y profesional */
+    --color-secundario: #00b4d8;    /* Celeste agua */
+    --color-acento: #ff006e;        /* Rosa/Fucsia enérgico para llamados a la acción y badges */
+    --color-exito: #38b000;         /* Verde para novedades positivas */
+    --color-oscuro: #2b2d42;        /* Gris Oxford para textos legibles */
+    --color-claro: #f8f9fa;         /* Fondo alternativo suave */
+    --color-blanco: #ffffff;
+    
+    /* Degradados Fluidos (Innovación visual solicitada) */
+    --gradiente-principal: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    --gradiente-soft: linear-gradient(to bottom, #e0f2fe, #f0fdf4);
+    
+    /* Tipografías */
+    --fuente-titulos: 'Fredoka', sans-serif;
+    --fuente-textos: 'Poppins', sans-serif;
+    
+    /* Sombras y transiciones reutilizables */
+    --shadow-soft: 0 10px 20px rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 15px 35px rgba(58, 134, 255, 0.15);
+    --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Reset básico para evitar márgenes extra */
+/* ==========================================================================
+   2. RESET DE MÁRGENES Y CONFIGURACIÓN GLOBAL (Clase 7 - Box Model)
+   ========================================================================== */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Asegura un cálculo predecible de anchos (Clase 7) */
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    line-height: 1.8;
-    color: var(--texto);
-    background-color: var(--fondo-gris);
+    font-family: var(--fuente-textos);
+    color: var(--color-oscuro);
+    background-color: var(--color-blanco);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Contenedor central para que no ocupe todo el ancho en pantallas grandes */
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-oscuro);
+}
+
+/* Contenedor estándar para centrar el contenido (Clase 7) */
 .contenedor {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-/* 1. Centrar el título de la sección */
-.titulo-centrado {
-    text-align: center; /* Alinea el texto al medio del contenedor [1] */
-    margin-bottom: 2rem; /* Agrega espacio hacia abajo antes de los números [2] */
-}
-
-/* 2. Centrar los bloques de impacto en la pantalla usando Flexbox */
-.flex-impacto {
-    display: flex; /* Convierte al div en un contenedor flexible [3] */
-    justify-content: center; /* Centra los items horizontalmente en el eje principal [3] */
-    gap: 3rem; /* Agrega una separación uniforme entre los cuadros [3] */
-    flex-wrap: wrap; /* Permite que los cuadros bajen si no entran en pantallas chicas [3] */
-    padding: 2rem 0;
-}
-
-/* 3. Centrar el texto dentro de cada bloque de estadística */
-.impacto-item {
-    text-align: center; /* Centra el número y el texto dentro de cada <dl> [1] */
-    min-width: 150px;
-}
-
-.impacto-item dt {
-    font-size: 2.5rem; /* Tamaño destacado para el número [4] */
-    font-weight: bold; /* Grosor de fuente para resaltar [1] */
-    color: var(--primario); /* Color institucional */
-    display: block;
-}
-
-/* 4. Asegurar que el contenedor general esté centrado en la página */
-.contenedor {
-    max-width: 1100px; /* Define un ancho máximo para que no se estire de más [4] */
-    margin: 0 auto; /* Centra el bloque entero horizontalmente en la pantalla [2, 5] */
-    padding: 0 1.5rem; /* Margen interno para que no toque los bordes del celular [2] */
-}
-
-/* Encabezado y Navegación */
-header {
-    background-color: var(--primario);
-    color: var(--blanco);
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px; /* Espacio consistente entre links [2] */
-    margin-top: 1.5rem;
-}
-
-nav a {
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s; /* Animación suave */
-}
-
-nav a:hover {
-    color: var(--acento); /* Feedback visual al usuario [7] */
-}
-
-/* Diseño de Cuadros (Cards) */
-.grid-programas {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 2rem;
-}
-
-.tarjeta {
-    background: var(--blanco);
-    padding: 1.5rem;
-    border-radius: 8px; /* Forma redondeada */
-    border-left: 5px solid var(--color-primario); /* Detalle de color */
-    box-shadow: 0 4px 6px rgba(168, 22, 22, 0.147); /* Sombra para dar profundidad */
-}
-
-.tarjeta h3 {
-    color: var(--color-primario);
-    margin-bottom: 1rem;
-}
-
-/* Diseño de Botones en INICIO*/
-.boton {
-    display: inline-block;
-    background-color: #ffffff(--color-acento);
-    color: #151809(--blanco);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-}
-
-.boton:hover {
-    background-color: #7ba8e3; /* Oscurece al pasar el mouse */
-}
-
-/* Estilo de la Tabla */
-.tabla-estilo {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5rem;
-    background: #e9e7e7(--blanco);
-}
-
-.tabla-estilo th, .tabla-estilo td {
-    padding: 12px;
-    border: 1px solid #3427ec;
-    text-align: center;
-}
-
-.tabla-estilo thead {
-    background-color: #c4b6ad(--color-primario);
-    color: #afcf3a(--blanco);
-}
-
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background: #222;
-    color: var(--blanco);
-    margin-top: 3rem;
-}
-
-/* NOSOTROS -------------- Contenedores */
-.contenedor-nosotros {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 4rem 1.5rem;
+    padding: 0 20px;
 }
 
-/* Tarjetas de Equipo (Grid) */
-.grid-equipo {
-    display: flex;
-    flex-wrap: wrap; /* Permite que bajen en móviles [2] */
-    gap: 20px;
-    margin-top: 2rem;
+.seccion-padding {
+    padding: 80px 0;
 }
 
-.tarjeta-equipo {
-    background: var(--blanco);
-    flex: 1 1 calc(45% - 20px); /* Ocupa casi la mitad [8] */
-    padding: 1.5rem;
-    border-radius: 12px; /* Forma redondeada moderna */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
-    border-top: 4px solid var(--primario);
+.fondo-claro {
+    background-color: var(--color-claro);
 }
 
-/* Cajas de Valores (Flexbox) */
-.flex-valores {
+.titulo-centrado {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Línea decorativa debajo de los títulos principales */
+.titulo-centrado::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: var(--color-acento);
+    margin: 10px auto 0 auto;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   3. MAQUETADO DE HEADER Y MENÚ FLOTANTE (Clase 9 - Position: Sticky)
+   ========================================================================== */
+.header-principal {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* Efecto vidrio esmerilado moderno */
+    padding: 15px 0;
+    box-shadow: var(--shadow-soft);
+    z-index: 1000; /* Asegura quedar por encima de todo al hacer scroll */
+}
+
+/* Aplicación técnica de Posicionamiento Sticky (Clase 9) */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+}
+
+/* Flexbox para distribuir Logo y Navegación (Clase 7) */
+.header-flex {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    margin: 3rem 0;
-}
-
-.valor-caja {
-    text-align: center;
-    padding: 2rem;
-    background: var(--blanco);
-    border-radius: 15px;
-    flex: 1;
-}
-
-.icono {
-    font-size: 2.5rem;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-/* Botón Moderno */
-.boton-moderno {
-    display: inline-block;
-    background-color: var(--acento);
-    color: var(--blanco);
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 50px; /* Forma de píldora */
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
-    
-}
-
-.boton-moderno:hover {
-    background-color: #8de116d2;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: #bbb;
-    padding: 3rem 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-}
-
-footer a { color: var(--blanco); }
-
-/* Estilos para la sección de CONTACTO */
-
-.tarjeta-grande {
-    background: var(--blanco);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    margin-bottom: 2rem;
-}
-
-.formulario-estilizado fieldset {
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-}
-
-.formulario-estilizado legend {
-    font-weight: bold;
-    color: var(--color-primario);
-    padding: 0 10px;
-}
-
-.campo {
-    margin-bottom: 1.2rem;
-}
-
-.campo label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-/* Estilo de los inputs y selects */
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--color-primario);
-    box-shadow: 0 0 5px rgba(46, 90, 86, 0.2);
-}
-
-/* Opciones de Radio y Checkbox */
-.opciones-radio, .campo-checkbox {
-    display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-.opciones-radio label, .campo-checkbox label {
-    display: inline;
-    font-weight: normal;
-    margin-bottom: 0;
-}
-
-/* Botones diferenciados */
-.acciones-formulario {
-    display: flex;
+    flex-wrap: wrap;
     gap: 15px;
 }
 
+.logo-container h1 {
+    font-size: 1.8rem;
+    color: var(--color-primario);
+}
+
+.logo-container h1 span {
+    color: var(--color-secundario);
+}
+
+.logo-container p {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+/* Flexbox horizontal para los links del menú (Clase 7) */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-oscuro);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 5px 10px;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+/* Microinteracción en los enlaces: Barra expansiva inferior */
+.animated-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-acento);
+    transition: var(--transition-smooth);
+}
+
+.animated-link:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-acento);
+}
+
+/* ==========================================================================
+   4. SECCIÓN HERO (Degradados fluidos, formas SVG y botones)
+   ========================================================================== */
+.hero-seccion {
+    background: var(--gradiente-principal);
+    color: var(--color-blanco);
+    position: relative;
+    padding: 120px 0 180px 0;
+    text-align: center;
+}
+
+.hero-contenido {
+    max-width: 800px;
+}
+
+.hero-contenido h2 {
+    color: var(--color-blanco);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-contenido p {
+    font-size: 1.25rem;
+    margin-bottom: 45px;
+    opacity: 0.95;
+}
+
+/* Componentes de botones interactivos */
+.hero-botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
 .boton-primario {
-    background-color: var(--color-primario);
-    color: #555;
-    border: 2px solid #616060;
-    cursor: pointer;
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+}
+
+.boton-primario:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-acento);
+    transform: translateY(-3px);
 }
 
 .boton-secundario {
+    background-color: transparent;
+    color: var(--color-blanco);
+    border: 2px solid var(--color-blanco);
+}
+
+.boton-secundario:hover {
+    background-color: var(--color-blanco);
+    color: var(--color-primario);
+    transform: translateY(-3px);
+}
+
+/* Divisor de formas fluido (Wave SVG) posicionado de forma absoluta al fondo */
+.custom-shape-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+.custom-shape-divider .shape-fill {
+    fill: var(--color-blanco);
+}
+
+/* ==========================================================================
+   5. SECCIÓN IMPACTO (Morfismo circular mediante Flexbox)
+   ========================================================================== */
+.flex-impacto {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.impacto-item {
+    text-align: center;
+    flex: 1 1 250px; /* Flex-grow, shrink y base dinámica (Clase 7) */
+}
+
+.impacto-circulo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px auto;
+    background: var(--gradiente-soft);
+    border: 3px dashed var(--color-secundario);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.impacto-circulo .numero {
+    font-family: var(--fuente-titulos);
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    font-weight: 700;
+}
+
+.impacto-item:hover .impacto-circulo {
+    transform: scale(1.1) rotate(10deg);
+    border-style: solid;
+    background: var(--gradiente-principal);
+}
+
+.impacto-item:hover .numero {
+    color: var(--color-blanco);
+}
+
+.descripcion-impacto {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   6. SECCIÓN NOVEDADES: DISPOSICIÓN EN MAQUETA GRID (Clase 9 - CSS Grid)
+   ========================================================================== */
+.grid-articulos {
+    display: grid; /* Activamos la grilla bidimensional (Clase 9) */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Columnas automáticas responsivas */
+    gap: 35px;
+}
+
+/* Tarjeta estructurada con Posicionamiento Relativo para contener elementos absolutos */
+.relative-card {
+    position: relative; /* Requisito para heredar anclajes absolutos (Clase 9) */
+}
+
+.tarjeta-noticia {
+    background-color: var(--color-blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.tarjeta-noticia:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-premium);
+}
+
+/* Badges flotantes utilizando position: absolute (Clase 9) */
+.badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--color-blanco);
+    z-index: 10; /* Queda sobre el contenedor multimedia */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.badge-urgente { background-color: var(--color-acento); }
+.badge-nuevo { background-color: var(--color-exito); }
+
+/* Simulación interactiva de video/gif en la imagen de la card */
+.contenedor-multimedia {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.img-zoom {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+    opacity: 0.9;
+}
+
+/* Capa de video que aparece al hacer hover sobre la tarjeta */
+.overlay-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 180, 216, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 5;
+    transition: var(--transition-smooth);
+}
+
+.overlay-play span {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--color-primario);
+    transform: scale(0.8);
+    transition: var(--transition-smooth);
+}
+
+.tarjeta-noticia:hover .img-zoom {
+    transform: scale(1.1);
+}
+
+.tarjeta-noticia:hover .overlay-play {
+    opacity: 1;
+}
+
+.tarjeta-noticia:hover .overlay-play span {
+    transform: scale(1);
+}
+
+.tarjeta-cuerpo {
+    padding: 25px;
+}
+
+.time-tag {
+    font-size: 0.85rem;
+    color: var(--color-secundario);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tarjeta-cuerpo h3 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+/* ==========================================================================
+   7. SECCIÓN PILARES: MAQUETACIÓN FLEXBOX (Clase 7)
+   ========================================================================== */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Envoltura para adaptarse a pantallas móviles */
+    gap: 30px;
+}
+
+.card-interactiva {
+    background: var(--color-blanco);
+    border-left: 6px solid var(--color-primario); /* Línea lateral de acento decorativo */
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1 1 calc(33.333% - 30px); /* Ocupación equilibrada en 3 columnas */
+    min-width: 280px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.card-interactiva:nth-child(2) { border-left-color: var(--color-secundario); }
+.card-interactiva:nth-child(3) { border-left-color: var(--color-acento); }
+
+.card-interactiva:hover {
+    transform: translateY(-5px);
+    background: var(--gradiente-soft);
+    box-shadow: var(--shadow-premium);
+}
+
+.icono-flotante {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    transition: var(--transition-smooth);
+}
+
+.card-interactiva:hover .icono-flotante {
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.card-interactiva h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.texto-secundario {
+    display: block;
+    margin-top: 10px;
+    color: #7f8c8d;
+}
+
+/* ==========================================================================
+   8. FOOTER MAQUETADO EFICIENTE
+   ========================================================================== */
+footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    padding: 50px 0;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-direccion {
+    font-style: normal;
+}
+
+.footer-link {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-link:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: right;
+}
+
+.copyright p strong {
+    color: var(--color-secundario);
+}
+
+/* ==========================================================================
+   9. ANIMACIONES DE MOVIMIENTO (KEYFRAMES - Innovación avanzada)
+   ========================================================================== */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); box-shadow: 0 6px 20px rgba(255, 0, 110, 0.4); }
+    100% { transform: scale(1); }
+}
+
+.pulse-effect {
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Adaptación responsiva básica para pantallas de smartphones */
+@media (max-width: 768px) {
+    .header-flex, .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    .copyright { text-align: center; }
+    .hero-contenido h2 { font-size: 2.3rem; }
+}
+
+/* ==========================================================================
+   NOSOTROS: ESTILOS COMPLEMENTARIOS (uso los contenidos de las Clase 7 y Clase 9 Avanzada)
+   ========================================================================== */
+
+/* Subtítulos generales centrados */
+.subtitulo-centrado {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+/* Caja de presentación con fondo degradado suave e interactivo */
+.texto-destacado-nosotros {
+    background: var(--gradiente-soft);
+    padding: 40px;
+    border-radius: 16px;
+    border-left: 6px solid var(--color-secundario);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.texto-destacado-nosotros p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--color-oscuro);
+}
+
+.texto-destacado-nosotros p:last-child {
+    margin-bottom: 0;
+}
+
+/* Espaciados específicos internos para modular las subsecciones */
+.seccion-padding-interna {
+    padding: 60px 0;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+/* ==========================================================================
+   MAQUETADO DE EQUIPO MEDIANTE CSS GRID (Clase 9 - Dos Dimensiones)
+   ========================================================================== */
+.grid-equipo {
+    display: grid;
+    /* Define columnas automáticas con tamaño mínimo de 260px que rellenan el flujo (Clase 9) */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Tarjetas individuales del equipo con perspectiva para la animación del hover */
+.tarjeta-equipo {
+    background-color: var(--color-blanco);
+    border-radius: 14px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 180, 216, 0.1);
+    transition: var(--transition-smooth);
+}
+
+/* Efecto hover interactivo avanzado de transformación espacial */
+.tarjeta-equipo:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-premium);
+    border-color: var(--color-primario);
+}
+
+/* Iconos ilustrativos internos con efecto flotante */
+.avatar-decorativo {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    transition: var(--transition-smooth);
+}
+
+.tarjeta-equipo:hover .avatar-decorativo {
+    transform: rotateY(360deg); /* Animación 3D de giro completo */
+}
+
+.tarjeta-equipo h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    color: var(--color-oscuro);
+}
+
+.tarjeta-equipo p {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+/* Insignias internas flotantes con Position: Absolute (Clase 9) */
+.badge-profesional {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%); /* Centra la caja absoluta de forma exacta respecto a su eje x */
     background-color: var(--color-primario);
-    color: #555;
-    border: 2px solid #616060;
+    color: var(--color-blanco);
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(58, 134, 255, 0.3);
+    transition: var(--transition-smooth);
+}
+
+.tarjeta-equipo:hover .badge-profesional {
+    background-color: var(--color-acento);
+    box-shadow: 0 4px 8px rgba(255, 0, 110, 0.3);
+}
+
+/* ==========================================================================
+   MAQUETADO DE VALORES CON FLEXBOX RESPONSIVO (Clase 7)
+   ========================================================================== */
+.flex-valores {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Envoltura flex para el flujo móvil (Clase 7) */
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.valor-caja {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 280px;
+}
+
+.accion-nosotros {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* ==========================================================================
+   CONTENEDOR DE VIDEO FLUIDO Y RESPONSIVO (Innovación Multimedia)
+   ========================================================================== */
+.subtitulo-video {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: var(--color-oscuro);
+}
+
+.video-seccion-container {
+    margin-top: 60px;
+}
+
+/* Técnica profesional para videos fluidos sin romper relaciones de aspecto */
+.video-responsivo-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 calculada de forma fluida */
+    height: 0;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: var(--shadow-premium);
+    border: 4px solid var(--color-blanco);
+}
+
+/* Elemento iframe absoluto para heredar el tamaño adaptativo de la caja contenedora */
+.video-responsivo-contenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================================
+   PROGRAMAS: GRID LAYOUT Y COMPONENTES DE TABLA (Clase 9)
+   ========================================================================== */
+
+/* 1. Grilla Bidimensional para el catálogo de Programas */
+.grid-programas {
+    display: grid;
+    /* Divide la grilla en columnas automáticas responsivas con un mínimo de 340px (Clase 9) */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Tarjetas de programas individuales con bordes asimétricos curvos más orgánicos */
+.tarjeta-programa {
+    background: var(--color-blanco);
+    border-radius: 24px 4px 24px 4px; /* Estilo no rígido */
+    padding: 40px 30px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 180, 216, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+}
+
+.tarjeta-programa:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-premium);
+    border-color: var(--color-primario);
+    border-radius: 4px 24px 4px 24px; /* Invierte la curvatura orgánicamente en el hover */
+}
+
+/* Iconografía interna ampliada */
+.tarjeta-programa-icono {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.tarjeta-programa h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--color-primario);
+}
+
+.tarjeta-programa p {
+    font-size: 1rem;
+    color: var(--color-oscuro);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.tarjeta-programa-footer {
+    margin-top: auto;
+}
+
+/* Badges posicionado con absoluta respecto a la card (Clase 9) */
+.badge-programa {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 30px;
+    color: var(--color-blanco);
+    font-family: var(--fuente-titulos);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.badge-primario-tags { background-color: var(--color-primario); }
+.badge-acento-tags { background-color: var(--color-acento); }
+
+/* ==========================================================================
+   2. ESTILIZACIÓN COMPLETA DE TABLA MODERNA
+   ========================================================================== */
+.contenedor-tabla-seccion {
+    border-radius: 24px;
+    margin-top: 40px;
+}
+
+/* Envoltura con propiedad de desplazamiento para que la tabla no rompa layouts móviles */
+.tabla-responsiva-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    background-color: var(--color-blanco);
+}
+
+.tabla-estilo {
+    width: 100%;
+    border-collapse: collapse; /* Elimina dobles bordes rígidos tradicionales */
+    font-size: 1.05rem;
+    text-align: left;
+    min-width: 600px;
+}
+
+/* Cabecera con degradado fluido agua (Estética suave solicitada) */
+.tabla-estilo thead tr {
+    background: var(--gradiente-principal);
+    color: var(--color-blanco);
+    font-family: var(--fuente-titulos);
+}
+
+.tabla-estilo th, 
+.tabla-estilo td {
+    padding: 18px 24px;
+}
+
+.tabla-estilo tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: var(--transition-smooth);
+}
+
+/* Fila interactiva: cambia el fondo suavemente al pasar el cursor */
+.tabla-estilo tbody tr:hover {
+    background-color: rgba(0, 180, 216, 0.05);
+    transform: scale(0.995);
+}
+
+.tabla-estilo tbody th {
+    font-weight: 600;
+    color: var(--color-oscuro);
+}
+
+/* Estilo para las etiquetas de frecuencia dentro de la tabla */
+.tag-tabla {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.tag-semanal { background-color: #e0f2fe; color: #0369a1; }
+.tag-mensual { background-color: #fef3c7; color: #d97706; }
+.tag-bimensual { background-color: #e2e8f0; color: #475569; }
+
+/* Pie de tabla con estilo de resalte e inversión cromática */
+.tabla-estilo tfoot tr {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.tabla-estilo tfoot th {
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    color: var(--color-secundario);
+}
+
+/* ==========================================================================
+   CONTACTO: FORMULARIOS INTERACTIVOS Y ASIDE LAYOUT (Clase 7 y Clase 9)
+   ========================================================================== */
+
+/* Layout general de contacto distribuyendo el Formulario y el Sidebar (Clase 9) */
+.layout-contacto-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Columna principal del formulario más ancha */
+    gap: 40px;
+    align-items: start;
+}
+
+/* Tarjeta contenedora del formulario con bordes suaves */
+.tarjeta-grande-formulario {
+    background-color: var(--color-blanco);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 180, 216, 0.1);
+}
+
+.titulo-formulario {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 15px;
+}
+
+.descripcion-formulario {
+    color: #55595c;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+}
+
+/* Estilización de los Fieldsets eliminando los bordes toscos de navegador */
+.fieldset-formulario {
+    border: none;
+    margin-bottom: 35px;
+    padding: 0;
+}
+
+/* Leyendas estilizadas como mini encabezados amigables */
+.legend-formulario {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-oscuro);
+    margin-bottom: 20px;
+    border-bottom: 2px dashed var(--color-secundario);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+/* Estructura vertical de cada grupo etiqueta-campo usando Box Model (Clase 7) */
+.campo-bloque {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.label-formulario {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+}
+
+/* Estilo unificado para Inputs, Textareas y Selects (Adiós a la rigidez visual) */
+.input-formulario,
+.textarea-formulario,
+.select-formulario {
+    font-family: var(--fuente-textos);
+    font-size: 1rem;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: var(--color-claro);
+    color: var(--color-oscuro);
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+/* Pseudo-clase :focus avanzada (Clase 7 - Interactividad de foco) */
+.input-formulario:focus,
+.textarea-formulario:focus,
+.select-formulario:focus {
+    border-color: var(--color-primario);
+    background-color: var(--color-blanco);
+    box-shadow: 0 0 0 4px rgba(58, 134, 255, 0.15); /* Efecto halo de luz */
+}
+
+/* Área de texto con restricción de redimensionamiento horizontal */
+.textarea-formulario {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Distribución horizontal flexible para las opciones radiales (Clase 7) */
+.flex-radios-contenedor {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.opciones-radio-item,
+.campo-checkbox-bloque {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
 }
 
-.lista-limpia {
+.campo-checkbox-bloque {
+    margin-top: 15px;
+}
+
+/* Estilización sutil de radios y checkboxes mediante pseudo-clase :checked */
+.radio-formulario,
+.checkbox-formulario {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primario); /* Aplica el color de marca al control nativo */
+    cursor: pointer;
+}
+
+.label-radio-checkbox {
+    font-size: 0.98rem;
+    color: var(--color-oscuro);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Alineación y separación de botones con Flexbox (Clase 7) */
+.acciones-formulario-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.acciones-formulario-flex .boton {
+    cursor: pointer;
+    border: none;
+}
+
+.acciones-formulario-flex .boton-secundario {
+    background-color: #e2e8f0;
+    color: var(--color-oscuro);
+}
+
+.acciones-formulario-flex .boton-secundario:hover {
+    background-color: #cbd5e1;
+    color: var(--color-oscuro);
+    transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   SIDEBAR LATERAL DE INFORMACIÓN
+   ========================================================================== */
+.info-contacto-sidebar {
+    position: relative;
+}
+
+.tarjeta-lateral {
+    background-color: var(--color-blanco);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    border-top: 6px solid var(--color-acento); /* Detalle de acento superior */
+}
+
+.tarjeta-lateral h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.subtexto-lateral {
+    font-size: 0.92rem;
+    color: #6c757d;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.lista-contacto-side {
     list-style: none;
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.lista-limpia li {
-    margin-bottom: 10px;
+.lista-contacto-side li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
 }
 
-/* Estilo para resaltar la página actual en el menú */
-.nav-links a.active {
-    color: var(--acento); /* Color naranja que definimos antes */
-    border-bottom: 2px solid var(--acento); /* Línea decorativa fija */
-    padding-bottom: 5px;
+.icono-lista-side {
+    font-size: 1.5rem;
+    background-color: var(--gradiente-soft);
+    padding: 8px;
+    border-radius: 10px;
+    line-height: 1;
+}
+
+.datos-lista-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-lista-side strong {
+    font-size: 0.9rem;
+    color: var(--color-oscuro);
+}
+
+.datos-lista-side a,
+.datos-lista-side span {
+    font-size: 0.95rem;
+    color: var(--color-primario);
+    text-decoration: none;
+    word-break: break-all; /* Evita que correos largos rompan la caja en móviles */
+}
+
+.datos-lista-side a:hover {
+    text-decoration: underline;
+    color: var(--color-acento);
+}
+
+/* ==========================================================================
+   ADAPTACIÓN RESPONSIVA FINAL (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .layout-contacto-grid {
+        grid-template-columns: 1fr; /* Pasa a formato de una sola columna en pantallas medianas/chicas */
+    }
+}
+
+@media (max-width: 480px) {
+    .tarjeta-grande-formulario {
+        padding: 25px 15px; /* Reduce acolchado en pantallas de teléfonos muy compactas */
+    }
+    .acciones-formulario-flex {
+        flex-direction: column; /* Apila los botones de acción de forma vertical */
+    }
+    .acciones-formulario-flex .boton {
+        width: 100%;
+        text-align: center;
+    }
 }
