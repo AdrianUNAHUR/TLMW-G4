@@ -4,42 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programas - Patitas Limpias</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
     <header>
-        <h1>ONG Patitas Limpias</h1>
+        <h1>ONG "Patitas Limpias"</h1>
+        <p>Higiene es Salud para nuestras mascotas</p>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="programas.html">Programas</a></li>
+                <li><a href="programas.html" class="active">Programas</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="contenedor">
             <h2>Nuestros Programas de Cuidado</h2>
             <p>Brindamos servicios esenciales para garantizar la salud de los animales domésticos.</p>
             
-            <article>
-                <h3>Baño Solidario</h3>
-                <p>Servicio de higiene para perros y gatos de familias en situación de vulnerabilidad.</p>
-            </article>
+            <!-- Cuadros o Cards -->
+            <div class="grid-programas">
+                <article class="tarjeta">
+                    <h3>Baño Solidario</h3>
+                    <p>Servicio de higiene para perros y gatos de familias en situación de vulnerabilidad.</p>
+                    <a href="#" class="boton">Saber más</a>
+                </article>
 
-            <article>
-                <h3>Corte de Rescatados</h3>
-                <p>Peluquería sanitaria para animales que acaban de ser sacados de la calle o refugios.</p>
-            </article>
+                <article class="tarjeta">
+                    <h3>Corte de Rescatados</h3>
+                    <p>Peluquería sanitaria para animales que acaban de ser sacados de la calle o refugios.</p>
+                    <a href="#" class="boton">Saber más</a>
+                </article>
+            </div>
         </section>
 
-        <section>
+        <section class="contenedor">
             <h2>Estadísticas de Impacto</h2>
             <p>A continuación se detalla el trabajo realizado durante el último año:</p>
             
-            <table border="1">
+            <table class="tabla-estilo">
                 <thead>
                     <tr>
                         <th scope="col">Programa</th>
@@ -77,6 +83,5 @@
     <footer>
         <p>&copy; 2026 Patitas Limpias - TLMW - UNAHUR</p>
     </footer>
-
 </body>
 </html>

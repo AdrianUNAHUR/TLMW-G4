@@ -1,0 +1,331 @@
+/* Variables de color basadas en una paleta profesional */
+:root {
+    --primario: #342c5d;    /* Verde Petróleo */
+    --acento: #e67e22;      /* Naranja para botones */
+    --fondo-gris: #a2b7cd;  /* Gris muy claro */
+    --blanco: #ffffff;
+    --texto: #011b22;
+}
+
+/* Reset básico para evitar márgenes extra */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.8;
+    color: var(--texto);
+    background-color: var(--fondo-gris);
+}
+
+/* Contenedor central para que no ocupe todo el ancho en pantallas grandes */
+.contenedor {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* 1. Centrar el título de la sección */
+.titulo-centrado {
+    text-align: center; /* Alinea el texto al medio del contenedor [1] */
+    margin-bottom: 2rem; /* Agrega espacio hacia abajo antes de los números [2] */
+}
+
+/* 2. Centrar los bloques de impacto en la pantalla usando Flexbox */
+.flex-impacto {
+    display: flex; /* Convierte al div en un contenedor flexible [3] */
+    justify-content: center; /* Centra los items horizontalmente en el eje principal [3] */
+    gap: 3rem; /* Agrega una separación uniforme entre los cuadros [3] */
+    flex-wrap: wrap; /* Permite que los cuadros bajen si no entran en pantallas chicas [3] */
+    padding: 2rem 0;
+}
+
+/* 3. Centrar el texto dentro de cada bloque de estadística */
+.impacto-item {
+    text-align: center; /* Centra el número y el texto dentro de cada <dl> [1] */
+    min-width: 150px;
+}
+
+.impacto-item dt {
+    font-size: 2.5rem; /* Tamaño destacado para el número [4] */
+    font-weight: bold; /* Grosor de fuente para resaltar [1] */
+    color: var(--primario); /* Color institucional */
+    display: block;
+}
+
+/* 4. Asegurar que el contenedor general esté centrado en la página */
+.contenedor {
+    max-width: 1100px; /* Define un ancho máximo para que no se estire de más [4] */
+    margin: 0 auto; /* Centra el bloque entero horizontalmente en la pantalla [2, 5] */
+    padding: 0 1.5rem; /* Margen interno para que no toque los bordes del celular [2] */
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: var(--primario);
+    color: var(--blanco);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Espacio consistente entre links [2] */
+    margin-top: 1.5rem;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s; /* Animación suave */
+}
+
+nav a:hover {
+    color: var(--acento); /* Feedback visual al usuario [7] */
+}
+
+/* Diseño de Cuadros (Cards) */
+.grid-programas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    padding: 1.5rem;
+    border-radius: 8px; /* Forma redondeada */
+    border-left: 5px solid var(--color-primario); /* Detalle de color */
+    box-shadow: 0 4px 6px rgba(168, 22, 22, 0.147); /* Sombra para dar profundidad */
+}
+
+.tarjeta h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+/* Diseño de Botones en INICIO*/
+.boton {
+    display: inline-block;
+    background-color: #ffffff(--color-acento);
+    color: #151809(--blanco);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.boton:hover {
+    background-color: #7ba8e3; /* Oscurece al pasar el mouse */
+}
+
+/* Estilo de la Tabla */
+.tabla-estilo {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: #e9e7e7(--blanco);
+}
+
+.tabla-estilo th, .tabla-estilo td {
+    padding: 12px;
+    border: 1px solid #3427ec;
+    text-align: center;
+}
+
+.tabla-estilo thead {
+    background-color: #c4b6ad(--color-primario);
+    color: #afcf3a(--blanco);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #222;
+    color: var(--blanco);
+    margin-top: 3rem;
+}
+
+/* NOSOTROS -------------- Contenedores */
+.contenedor-nosotros {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+/* Tarjetas de Equipo (Grid) */
+.grid-equipo {
+    display: flex;
+    flex-wrap: wrap; /* Permite que bajen en móviles [2] */
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.tarjeta-equipo {
+    background: var(--blanco);
+    flex: 1 1 calc(45% - 20px); /* Ocupa casi la mitad [8] */
+    padding: 1.5rem;
+    border-radius: 12px; /* Forma redondeada moderna */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
+    border-top: 4px solid var(--primario);
+}
+
+/* Cajas de Valores (Flexbox) */
+.flex-valores {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 3rem 0;
+}
+
+.valor-caja {
+    text-align: center;
+    padding: 2rem;
+    background: var(--blanco);
+    border-radius: 15px;
+    flex: 1;
+}
+
+.icono {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Botón Moderno */
+.boton-moderno {
+    display: inline-block;
+    background-color: var(--acento);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px; /* Forma de píldora */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+    
+}
+
+.boton-moderno:hover {
+    background-color: #8de116d2;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 3rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a { color: var(--blanco); }
+
+/* Estilos para la sección de CONTACTO */
+
+.tarjeta-grande {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+.formulario-estilizado fieldset {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+.formulario-estilizado legend {
+    font-weight: bold;
+    color: var(--color-primario);
+    padding: 0 10px;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Estilo de los inputs y selects */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px rgba(46, 90, 86, 0.2);
+}
+
+/* Opciones de Radio y Checkbox */
+.opciones-radio, .campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.opciones-radio label, .campo-checkbox label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* Botones diferenciados */
+.acciones-formulario {
+    display: flex;
+    gap: 15px;
+}
+
+.boton-primario {
+    background-color: var(--color-primario);
+    color: #555;
+    border: 2px solid #616060;
+    cursor: pointer;
+}
+
+.boton-secundario {
+    background-color: var(--color-primario);
+    color: #555;
+    border: 2px solid #616060;
+    cursor: pointer;
+}
+
+.lista-limpia {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.lista-limpia li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para resaltar la página actual en el menú */
+.nav-links a.active {
+    color: var(--acento); /* Color naranja que definimos antes */
+    border-bottom: 2px solid var(--acento); /* Línea decorativa fija */
+    padding-bottom: 5px;
+}
