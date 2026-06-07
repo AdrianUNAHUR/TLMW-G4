@@ -41,7 +41,7 @@ html {
 body {
     font-family: var(--fuente-textos);
     color: var(--color-oscuro);
-    background-color: var(--color-blanco);
+    background-color: #b0d6ef;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -163,6 +163,11 @@ h1, h2, h3 {
     color: var(--color-acento);
 }
 
+.nav-links a.active {
+    background-color: rgba(255, 0, 110, 0.1);
+    border-radius: 20px;
+}
+
 /* ==========================================================================
    4. SECCIÓN HERO (Degradados fluidos, formas SVG y botones)
    ========================================================================== */
@@ -237,7 +242,7 @@ h1, h2, h3 {
 /* Divisor de formas fluido (Wave SVG) posicionado de forma absoluta al fondo */
 .custom-shape-divider {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -253,7 +258,7 @@ h1, h2, h3 {
 }
 
 .custom-shape-divider .shape-fill {
-    fill: var(--color-blanco);
+    fill: #b0d6ef;
 }
 
 /* ==========================================================================
