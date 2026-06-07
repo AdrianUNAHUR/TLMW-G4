@@ -34,6 +34,10 @@
     box-sizing: border-box; /* Asegura un cálculo predecible de anchos (Clase 7) */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--fuente-textos);
     color: var(--color-oscuro);
@@ -1112,4 +1116,64 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+/* ==========================================================
+   DATOS INSTITUCIONALES (TP - Lista de Definición <dl>)
+   ========================================================== */
+
+.datos-institucionales {
+    max-width: 700px;
+    margin: 30px auto 0 auto;
+    padding: 25px;
+    background-color: var(--color-blanco);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+
+    display: block;
+}
+
+.datos-institucionales dt {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--color-primario);
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.datos-institucionales dd {
+    margin-left: 20;
+    margin-bottom: 15px;
+    color: var(--color-oscuro);
+}
+
+/* ==========================================================
+   AJUSTES NAVBAR BOOTSTRAP PERSONALIZADA
+   ========================================================== */
+
+.logo-titulo {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    color: var(--color-primario);
+    line-height: 1.1;
+}
+
+.logo-titulo strong {
+    color: var(--color-secundario);
+}
+
+.logo-container small {
+    display: block;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-top: 4px;
+}
+
+.navbar-toggler {
+    border: 2px solid var(--color-secundario);
+    border-radius: 12px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 4px rgba(58, 134, 255, 0.15);
 }
