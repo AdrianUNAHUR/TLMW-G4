@@ -10,139 +10,183 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="bg-light text-dark">
 
-    <header class="header-principal sticky-nav">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="contenedor container-fluid">
-            <a class="navbar-brand logo-container" href="index.html">
-                <span class="logo-titulo">ONG <strong>Patitas Limpias</strong></span>
-                <small>Higiene es Salud para nuestras mascotas</small>
-            </a>
+    <header class="header-principal sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a class="navbar-brand logo-container d-flex flex-column" href="index.html">
+                    <span class="logo-titulo fs-4 text-primary">ONG <strong>Patitas Limpias</strong></span>
+                    <small class="text-muted" style="font-size: 0.75rem;">Higiene es Salud para nuestras mascotas</small>
+                </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto nav-links">
-                    <li class="nav-item"><a href="index.html" class="nav-link animated-link">Inicio</a></li>
-                    <li class="nav-item"><a href="nosotros.html" class="nav-link active animated-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="programas.html" class="nav-link animated-link">Programas</a></li>
-                    <li class="nav-item"><a href="contacto.html" class="nav-link animated-link">Contacto</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto nav-links gap-2 mt-3 mt-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link animated-link">Inicio</a></li>
+                        <li class="nav-item"><a href="nosotros.html" class="nav-link active animated-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="programas.html" class="nav-link animated-link">Programas</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link animated-link">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-    <main class="seccion-padding">
+    <main>
         
-        <section class="banner-intro contenedor">
-            <h2 class="titulo-centrado">¿Quiénes Somos?</h2>
-            <div class="texto-destacado-nosotros">
-                <p>Somos un grupo de <strong>profesionales y voluntarios</strong> amantes de los animales que decidimos unirnos para mejorar la calidad de vida de las mascotas en González Catán.</p>
-                <p>Nacimos en 2024 como respuesta directa a la necesidad crítica de servicios de higiene accesibles en el conurbano bonaerense.</p>
-            </div>
-            <dl class="datos-institucionales">
-            <dt>Año de Fundación</dt>
-            <dd>2024</dd>
-
-            <dt>Zona de Trabajo</dt>
-            <dd>González Catán y Hurlingham</dd>
-
-            <dt>Especialidad</dt>
-            <dd>Higiene, baño sanitario y bienestar animal</dd>
-</dl>
-        </section>
-
-        <section class="equipo-seccion fondo-claro seccion-padding-interna">
-            <div class="contenedor">
-                <h2 class="titulo-centrado">Nuestro Equipo</h2>
-                <p class="subtitulo-centrado">El corazón e infraestructura de nuestra organización:</p>
+        <section class="py-5 banner-intro">
+            <div class="container text-center max-w-75">
+                <h2 class="fw-bold text-primary mb-4 titulo-centrado">¿Quiénes Somos?</h2>
+                <div class="fs-5 text-secondary row justify-content-center mb-5 texto-destacado-nosotros">
+                    <div class="col-12 col-md-10 col-lg-8">
+                        <p class="mb-3">Somos un grupo de <strong>profesionales y voluntarios</strong> amantes de los animales que decidimos unirnos para mejorar la calidad de vida de las mascotas en González Catán.</p>
+                        <p class="mb-0">Nacimos en 2024 como respuesta directa a la necesidad crítica de servicios de higiene accesibles en el conurbano bonaerense.</p>
+                    </div>
+                </div>
                 
-                <div class="grid-equipo">
+                <div class="row g-3 justify-content-center text-start">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <dl class="row bg-white p-4 rounded-4 shadow-sm border-0 datos-institucionales mb-0">
+                            <dt class="col-sm-5 fw-bold text-dark">Año de Fundación</dt>
+                            <dd class="col-sm-7 text-secondary">2024</dd>
+                            <hr class="text-black-50 my-2">
+                            <dt class="col-sm-5 fw-bold text-dark">Zona de Trabajo</dt>
+                            <dd class="col-sm-7 text-secondary">González Catán y Hurlingham</dd>
+                            <hr class="text-black-50 my-2">
+                            <dt class="col-sm-5 fw-bold text-dark">Especialidad</dt>
+                            <dd class="col-sm-7 text-secondary">Higiene, baño sanitario y bienestar animal</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-white equipo-seccion seccion-padding-interna">
+            <div class="container text-center">
+                <h2 class="fw-bold text-primary mb-5 titulo-centrado">Nuestro Equipo</h2>
+                <p class="text-muted mb-5 subtitulo-centrado">El corazón e infraestructura de nuestra organización:</p>
+                
+                <div class="row g-4 grid-equipo">
                     
-                    <article class="tarjeta-equipo relative-card">
-                        <span class="badge-profesional">Área Salud</span>
-                        <div class="avatar-decorativo">🩺</div>
-                        <h3>Especialistas Médicos</h3>
-                        <p>Veterinarios colegiados especializados en dermatología animal y control epidemiológico.</p>
-                    </article>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="card h-100 border-0 bg-light shadow-sm p-3 rounded-4 position-relative tarjeta-equipo relative-card">
+                            <span class="badge bg-danger position-absolute top-0 start-50 translate-middle badge-profesional">Área Salud</span>
+                            <div class="card-body pt-4">
+                                <div class="fs-1 mb-2 avatar-decorativo" aria-hidden="true">🩺</div>
+                                <h3 class="h5 card-title fw-bold text-dark mt-2">Especialistas Médicos</h3>
+                                <p class="card-text text-secondary small">Veterinarios colegiados especializados en dermatología animal y control epidemiológico.</p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article class="tarjeta-equipo relative-card">
-                        <span class="badge-profesional">Área Estética</span>
-                        <div class="avatar-decorativo">✂️</div>
-                        <h3>Peluquería Canina</h3>
-                        <p>Estilistas y peluqueros caninos profesionales capacitados en manejo técnico sin estrés.</p>
-                    </article>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="card h-100 border-0 bg-light shadow-sm p-3 rounded-4 position-relative tarjeta-equipo relative-card">
+                            <span class="badge bg-primary position-absolute top-0 start-50 translate-middle badge-profesional">Área Estética</span>
+                            <div class="card-body pt-4">
+                                <div class="fs-1 mb-2 avatar-decorativo" aria-hidden="true">✂️</div>
+                                <h3 class="h5 card-title fw-bold text-dark mt-2">Peluquería Canina</h3>
+                                <p class="card-text text-secondary small">Estilistas y peluqueros caninos profesionales capacitados en manejo técnico sin estrés.</p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article class="tarjeta-equipo relative-card">
-                        <span class="badge-profesional">Área Bienestar</span>
-                        <div class="avatar-decorativo">🧠</div>
-                        <h3>Etología y Conducta</h3>
-                        <p>Especialistas en comportamiento animal encargados de garantizar procesos armoniosos.</p>
-                    </article>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="card h-100 border-0 bg-light shadow-sm p-3 rounded-4 position-relative tarjeta-equipo relative-card">
+                            <span class="badge bg-success position-absolute top-0 start-50 translate-middle badge-profesional">Área Bienestar</span>
+                            <div class="card-body pt-4">
+                                <div class="fs-1 mb-2 avatar-decorativo" aria-hidden="true">🧠</div>
+                                <h3 class="h5 card-title fw-bold text-dark mt-2">Etología y Conducta</h3>
+                                <p class="card-text text-secondary small">Especialistas en comportamiento animal encargados de garantizar procesos armoniosos.</p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article class="tarjeta-equipo relative-card">
-                        <span class="badge-profesional">Área Apoyo</span>
-                        <div class="avatar-decorativo">🚚</div>
-                        <h3>Logística y Traslado</h3>
-                        <p>Cuerpo operativo de voluntarios dedicados a la distribución y transporte de unidades móviles.</p>
-                    </article>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <article class="card h-100 border-0 bg-light shadow-sm p-3 rounded-4 position-relative tarjeta-equipo relative-card">
+                            <span class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle badge-profesional">Área Apoyo</span>
+                            <div class="card-body pt-4">
+                                <div class="fs-1 mb-2 avatar-decorativo" aria-hidden="true">🚚</div>
+                                <h3 class="h5 card-title fw-bold text-dark mt-2">Logística y Traslado</h3>
+                                <p class="card-text text-secondary small">Cuerpo operativo de voluntarios dedicados a la distribución y transporte de unidades móviles.</p>
+                            </div>
+                        </article>
+                    </div>
 
                 </div>
             </div>
         </section>
 
-        <section class="valores-seccion contenedor seccion-padding-interna">
-            <h2 class="titulo-centrado">Nuestros Valores</h2>
-            
-            <div class="flex-valores">
-                <div class="valor-caja card-interactiva">
-                    <span class="icono-flotante">🐾</span>
-                    <h3>Bienestar Animal</h3>
-                    <p>Trato digno, empático y libre de estrés instrumental en cada proceso de baño.</p>
+        <section class="py-5 valores-seccion seccion-padding-interna">
+            <div class="container text-center">
+                <h2 class="fw-bold text-primary mb-5 titulo-centrado">Nuestros Valores</h2>
+                
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-5 flex-valores">
+                    
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white card-interactiva valor-caja">
+                            <div class="fs-2 text-primary mb-3 icono-flotante" aria-hidden="true">🐾</div>
+                            <h3 class="h5 fw-bold text-dark">Bienestar Animal</h3>
+                            <p class="card-text text-secondary small mb-0">Trato digno, empático y libre de estrés instrumental en cada proceso de baño.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white card-interactiva valor-caja">
+                            <div class="fs-2 text-primary mb-3 icono-flotante" aria-hidden="true">🤝</div>
+                            <h3 class="h5 fw-bold text-dark">Compromiso Social</h3>
+                            <p class="card-text text-secondary small mb-0">Defendemos la higiene preventiva como un derecho fundamental de la salud comunitaria.</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 border-0 shadow-sm p-4 rounded-4 bg-white card-interactiva valor-caja">
+                            <div class="fs-2 text-primary mb-3 icono-flotante" aria-hidden="true">✨</div>
+                            <h3 class="h5 fw-bold text-dark">Transparencia</h3>
+                            <p class="card-text text-secondary small mb-0">Rendición de cuentas clara, honesta y abierta a todos nuestros donantes y comunidad.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="valor-caja card-interactiva">
-                    <span class="icono-flotante">🤝</span>
-                    <h3>Compromiso Social</h3>
-                    <p>Defendemos la higiene preventiva como un derecho fundamental de la salud comunitaria.</p>
+                
+                <div class="mt-4 accion-nosotros">
+                    <a href="contacto.html" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-pill shadow boton boton-primario pulse-effect">¡Sumate como voluntario!</a>
                 </div>
-                <div class="valor-caja card-interactiva">
-                    <span class="icono-flotante">✨</span>
-                    <h3>Transparencia</h3>
-                    <p>Rendición de cuentas clara, honesta y abierta a todos nuestros donantes y comunidad.</p>
-                </div>
-            </div>
-            
-            <div class="accion-nosotros">
-                <a href="contacto.html" class="boton boton-primario pulse-effect">¡Sumate como voluntario!</a>
             </div>
         </section>
 
-        <section class="contenedor video-seccion-container">
-            <h3 class="subtitulo-video">Conocé nuestras jornadas en acción</h3>
-            <div class="video-responsivo-contenedor">
-                <iframe src="https://www.youtube.com/embed/pZshWrz65l8" title="YouTube video: Jornada Patitas Limpias" allowfullscreen></iframe>
+        <section class="py-5 bg-white border-top video-seccion-container">
+            <div class="container text-center contenedor-video">
+                <h3 class="fw-bold text-dark mb-4 subtitulo-video">Conocé nuestras jornadas en acción</h3>
+                
+                <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow video-responsivo-contenedor">
+                    <iframe src="https://www.youtube.com/embed/pZshWrz65l8" title="YouTube video: Jornada Patitas Limpias" allowfullscreen></iframe>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer>
-        <div class="contenedor footer-grid">
-            <address class="footer-direccion">
-                <strong>Sede Central:</strong><br>
-                Calle Origone 123, Hurlingham.<br>
-                Teléfono: <a href="tel:+541122223333" class="footer-link">011 2222-3333</a>
-            </address>
-            <div class="copyright">
-                <p>&copy; 2026 <strong>Patitas Limpias</strong> - TLMW - UNAHUR</p>
-                <p><small>Diseño Innovador por Adrián Nápoli</small></p>
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center text-md-start">
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-md-6 footer-direccion">
+                    <address class="mb-0 opacity-75 text-white small lh-lg">
+                        <strong class="text-white fs-6">Sede Central:</strong><br>
+                        Calle Origone 123, Hurlingham.<br>
+                        Teléfono: <a href="tel:+541122223333" class="text-info text-decoration-none fw-medium footer-link">011 2222-3333</a>
+                    </address>
+                </div>
+                <div class="col-12 col-md-6 text-md-end copyright">
+                    <p class="mb-1 small opacity-75">&copy; 2026 <strong>Patitas Limpias</strong> - TLMW - UNAHUR</p>
+                    <p class="mb-0 small text-muted">Diseño Innovador por Adrián Nápoli</p>
+                </div>
             </div>
         </div>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

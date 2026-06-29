@@ -4,152 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Patitas Limpias</title>
+    <!-- Fuentes Tipográficas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos Personalizados del Alumno -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="bg-light text-dark transition-all">
 
-   <header class="header-principal sticky-nav">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="contenedor container-fluid">
-            <a class="navbar-brand logo-container" href="index.html">
-                <span class="logo-titulo">ONG <strong>Patitas Limpias</strong></span>
-                <small>Higiene es Salud para nuestras mascotas</small>
-            </a>
+    <header class="header-principal sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light py-3">
+            <div class="container">
+                <a class="navbar-brand logo-container d-flex flex-column" href="index.html">
+                    <span class="logo-titulo fs-4 text-primary">ONG <strong>Patitas Limpias</strong></span>
+                    <small class="text-muted" style="font-size: 0.75rem;">Higiene es Salud para nuestras mascotas</small>
+                </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto nav-links">
-                    <li class="nav-item"><a href="index.html" class="nav-link animated-link">Inicio</a></li>
-                    <li class="nav-item"><a href="nosotros.html" class="nav-link animated-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="programas.html" class="nav-link animated-link">Programas</a></li>
-                    <li class="nav-item"><a href="contacto.html" class="nav-link active animated-link">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-    <main class="seccion-padding">
-        <div class="contenedor layout-contacto-grid">
-            
-            <section class="tarjeta-grande-formulario">
-                <h2 class="titulo-formulario">Contactate con nosotros</h2>
-                <p class="descripcion-formulario">Si tenés un refugio, rescataste un animal o conocés a una familia que necesite de nuestra ayuda, completá el formulario para coordinar una jornada operativa:</p>
-
-                <form action="#" method="post" class="formulario-estilizado">
-                    
-                    <fieldset class="fieldset-formulario">
-                        <legend class="legend-formulario">Datos Personales</legend>
-                        
-                        <div class="campo-bloque">
-                            <label for="nombre" class="label-formulario">Nombre completo:</label>
-                            <input type="text" id="nombre" name="nombre" class="input-formulario" required placeholder="Ej: Juan Pérez">
-                        </div>
-
-                        <div class="campo-bloque">
-                            <label for="email" class="label-formulario">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" class="input-formulario" required placeholder="nombre@ejemplo.com">
-                        </div>
-
-                        <div class="campo-bloque">
-                            <label for="tipo_animal" class="label-formulario">¿Por qué tipo de animal consultás?</label>
-                            <div class="select-personalizado-contenedor">
-                                <select id="tipo_animal" name="tipo_animal" class="select-formulario">
-                                    <option value="perro">🐶 Perro</option>
-                                    <option value="gato">🐱 Gato</option>
-                                    <option value="otro">🐾 Otro / Varios animales</option>
-                                </select>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset class="fieldset-formulario">
-                        <legend class="legend-formulario">Tu Mensaje</legend>
-                        
-                        <div class="campo-bloque">
-                            <label class="label-formulario">Motivo preferente de la consulta:</label>
-                            
-                            <div class="flex-radios-contenedor">
-                                <div class="opciones-radio-item">
-                                    <input type="radio" id="bano" name="motivo" value="bano" class="radio-formulario" checked>
-                                    <label for="bano" class="label-radio-checkbox">🧼 Baño Solidario</label>
-                                </div>
-                                <div class="opciones-radio-item">
-                                    <input type="radio" id="corte" name="motivo" value="corte" class="radio-formulario">
-                                    <label for="corte" class="label-radio-checkbox">✂️ Peluquería Sanitaria</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="campo-bloque">
-                            <label for="mensaje" class="label-formulario">Detalles adicionales de la situación:</label>
-                            <textarea id="mensaje" name="mensaje" class="textarea-formulario" rows="5" placeholder="Contanos brevemente cuántos animales son, el estado de su pelaje o si presentan dermatitis..."></textarea>
-                        </div>
-
-                        <div class="campo-checkbox-bloque">
-                            <input type="checkbox" id="novedades" name="novedades" class="checkbox-formulario">
-                            <label for="novedades" class="label-radio-checkbox">📩 Quiero recibir convocatorias y novedades en mi mail</label>
-                        </div>
-                    </fieldset>
-
-                    <div class="acciones-formulario-flex">
-                        <button type="submit" class="boton boton-primario pulse-effect">Enviar mensaje</button>
-                        <button type="reset" class="boton boton-secundario">Limpiar campos</button>
-                    </div>
-                </form>
-            </section>
-
-            <aside class="info-contacto-sidebar">
-                <div class="tarjeta-lateral relative-card">
-                    <h3>Otras vías de contacto</h3>
-                    <p class="subtexto-lateral">Si necesitás comunicarte de forma inmediata por emergencias operativas o donaciones urgentes de insumos:</p>
-                    
-                    <ul class="lista-contacto-side">
-                        <li>
-                            <span class="icono-lista-side">✉️</span>
-                            <div class="datos-lista-side">
-                                <strong>Email Institucional</strong>
-                                <a href="mailto:consultas@patitaslimpias.org">consultas@patitaslimpias.org</a>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="icono-lista-side">📞</span>
-                            <div class="datos-lista-side">
-                                <strong>Atención Telefónica</strong>
-                                <a href="tel:+541100000000">011 0000-0000</a>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="icono-lista-side">⏰</span>
-                            <div class="datos-lista-side">
-                                <strong>Horarios de Recepción</strong>
-                                <span>Lunes a Viernes de 9:00 a 17:00 hs.</span>
-                            </div>
-                        </li>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto nav-links gap-2 mt-3 mt-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link animated-link">Inicio</a></li>
+                        <li class="nav-item"><a href="nosotros.html" class="nav-link animated-link">Nosotros</a></li>
+                        <li class="nav-item"><a href="programas.html" class="nav-link animated-link">Programas</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link active animated-link">Contacto</a></li>
                     </ul>
                 </div>
-            </aside>
-            
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-5 mb-5">
+        <div class="container">
+            <!-- GRILLA BOOTSTRAP PRINCIPAL: 2 Columnas responsivas (Clase 11) -->
+            <div class="row g-4 justify-content-center">
+                
+                <!-- COLUMNA DEL FORMULARIO (8 de 12 columnas en pantallas grandes) -->
+                <section class="col-12 col-lg-8">
+                    <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 tarjeta-grande-formulario">
+                        <h2 class="titulo-formulario fw-bold text-primary mb-3">Contactate con nosotros</h2>
+                        <p class="descripcion-formulario text-secondary mb-4">Si tenés un refugio, rescataste un animal o conocés a una familia que necesite de nuestra ayuda, completá el formulario para coordinar una jornada operativa:</p>
+
+                        <!-- Contenedor dinámico para Alertas de JavaScript (Clase 12) -->
+                        <div id="alertPlaceholder" class="mb-4"></div>
+
+                        <form id="formContacto" action="#" method="post" class="formulario-estilizado">
+                            
+                            <!-- Grupo: Datos Personales -->
+                            <fieldset class="border rounded-3 p-3 p-md-4 mb-4 bg-white fieldset-formulario">
+                                <legend class="float-none w-auto px-3 fs-5 fw-bold text-secondary legend-formulario">Datos Personales</legend>
+                                
+                                <div class="mb-3 campo-bloque">
+                                    <label for="nombre" class="form-label fw-semibold label-formulario">Nombre completo:</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control form-control-lg input-formulario" required placeholder="Ej: Juan Pérez">
+                                </div>
+
+                                <div class="mb-3 campo-bloque">
+                                    <label for="email" class="form-label fw-semibold label-formulario">Correo electrónico:</label>
+                                    <input type="email" id="email" name="email" class="form-control form-control-lg input-formulario" required placeholder="nombre@ejemplo.com">
+                                </div>
+
+                                <div class="mb-2 campo-bloque">
+                                    <label for="tipo_animal" class="form-label fw-semibold label-formulario">¿Por qué tipo de animal consultás?</label>
+                                    <select id="tipo_animal" name="tipo_animal" class="form-select form-select-lg select-formulario">
+                                        <option value="perro">🐶 Perro</option>
+                                        <option value="gato">🐱 Gato</option>
+                                        <option value="otro">🐾 Otro / Varios animales</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+
+                            <!-- Grupo: Mensaje -->
+                            <fieldset class="border rounded-3 p-3 p-md-4 mb-4 bg-white fieldset-formulario">
+                                <legend class="float-none w-auto px-3 fs-5 fw-bold text-secondary legend-formulario">Tu Mensaje</legend>
+                                
+                                <div class="mb-4 campo-bloque">
+                                    <label class="form-label fw-semibold d-block mb-2 label-formulario">Motivo preferente de la consulta:</label>
+                                    <div class="d-flex flex-wrap gap-3 flex-radios-contenedor">
+                                        <div class="form-check opciones-radio-item">
+                                            <input type="radio" id="bano" name="motivo" value="bano" class="form-check-input radio-formulario" checked>
+                                            <label for="bano" class="form-check-label label-radio-checkbox">🧼 Baño Solidario</label>                                        </div>
+                                        <div class="form-check opciones-radio-item">
+                                            <input type="radio" id="corte" name="motivo" value="corte" class="form-check-input radio-formulario">
+                                            <label for="corte" class="form-check-label label-radio-checkbox">✂️ Peluquería Sanitaria</label>                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 campo-bloque">
+                                    <label for="mensaje" class="form-label fw-semibold label-formulario">Detalles adicionales de la situación:</label>
+                                    <textarea id="mensaje" name="mensaje" class="form-control textarea-formulario" rows="5" required placeholder="Contanos brevemente cuántos animales son, el estado de su pelaje o si presentan dermatitis..."></textarea>
+                                </div>
+
+                                <div class="form-check campo-checkbox-bloque">
+                                    <input type="checkbox" id="novedades" name="novedades" class="form-check-input checkbox-formulario">
+                                    <label for="novedades" class="form-check-label small text-muted label-radio-checkbox" style="cursor: pointer;">📩 Quiero recibir convocatorias y novedades en mi mail</label>
+                                </div>
+                            </fieldset>
+
+                            <!-- Botonera adaptada con clases nativas de Bootstrap -->
+                            <div class="d-flex flex-wrap gap-3 acciones-formulario-flex">
+                                <button type="submit" class="btn btn-primary btn-lg px-4 py-2 flex-grow-1 flex-md-grow-0 fw-bold boton-primario pulse-effect">Enviar mensaje</button>
+                                <button type="reset" class="btn btn-outline-secondary btn-lg px-4 py-2 flex-grow-1 flex-md-grow-0 boton-secundario">Limpiar campos</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- SIDEBAR LATERAL (4 de 12 columnas en pantallas grandes - Se apila abajo en mobiles) -->
+                <aside class="col-12 col-lg-4 info-contacto-sidebar">
+                    <div class="card border-0 shadow-sm p-4 rounded-4 bg-white sticky-lg-top tarjeta-lateral relative-card sidebar-contacto-sticky">                        <h3 class="h4 fw-bold text-dark mb-3">Otras vías de contacto</h3>
+                        <p class="small text-muted mb-4 subtexto-lateral">Si necesitás comunicarte de forma inmediata por emergencias operativas o donaciones urgentes de insumos:</p>
+                        
+                        <ul class="list-unstyled d-flex flex-column gap-4 mb-0 lista-contacto-side">
+                            <li class="d-flex align-items-start gap-3">
+                                <span class="fs-3 lh-1 icono-lista-side" aria-hidden="true">✉️</span>
+                                <div class="datos-lista-side">
+                                    <strong class="d-block text-dark small">Email Institucional</strong>
+                                    <a href="mailto:consultas@patitaslimpias.org" class="text-primary text-decoration-none fw-semibold">consultas@patitaslimpias.org</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <span class="fs-3 lh-1 icono-lista-side" aria-hidden="true">📞</span>
+                                <div class="datos-lista-side">
+                                    <strong class="d-block text-dark small">Atención Telefónica</strong>
+                                    <a href="tel:+541100000000" class="text-primary text-decoration-none fw-semibold">011 0000-0000</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <span class="fs-3 lh-1 icono-lista-side" aria-hidden="true">⏰</span>
+                                <div class="datos-lista-side">
+                                    <strong class="d-block text-dark small">Horarios de Recepción</strong>
+                                    <span class="text-secondary small fw-medium">Lunes a Viernes de 9:00 a 17:00 hs.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                
+            </div>
         </div>
     </main>
 
-    <footer>
-        <div class="contenedor footer-grid">
-            <div class="footer-direccion">
-                <p>&copy; 2026 <strong>Patitas Limpias</strong> - TLMW - UNAHUR</p>
-            </div>
-            <div class="copyright">
-                <p><small>Diseño Innovador por Adrián Nápoli</small></p>
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center g-2 contenedor footer-grid">
+                <div class="text-md-start footer-direccion">
+                    <p class="mb-0 opacity-75">&copy; 2026 <strong>Patitas Limpias</strong> - TLMW - UNAHUR</p>
+                </div>
+                <div class="text-md-end copyright">
+                    <p class="mb-0 small text-muted">Diseño Innovador por Adrián Nápoli</p>
+                </div>
             </div>
         </div>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap 5 JavaScript Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- INNOVACIÓN TECNOLÓGICA CON JAVASCRIPT (Teoría de la Clase 12) -->
+    <script>
+        const formContacto = document.getElementById('formContacto');
+        const alertPlaceholder = document.getElementById('alertPlaceholder');
+
+        // Función reutilizable para inyectar alertas animadas de Bootstrap (Clase 12)
+        const mostrarAlerta = (mensaje, tipo) => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = [
+                `<div class="alert alert-${tipo} alert-dismissible fade show border-0 shadow-sm" role="alert">`,
+                `   <div>${mensaje}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('');
+            alertPlaceholder.innerHTML = ''; // Limpia alertas previas
+            alertPlaceholder.append(wrapper);
+        };
+
+        // Escucha del evento submit del formulario (Clase 12)
+        formContacto.addEventListener('submit', (event) => {
+            event.preventDefault(); // Evita que la página recargue de forma abrupta
+
+            // Acceso a los elementos del DOM e inspección de sus valores (Clase 12)
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            // Lógica de control de flujo / validación básica (Clase 12)
+            if (nombre === "" || email === "" || mensaje === "") {
+                mostrarAlerta('❌ Por favor, completá todos los campos obligatorios.', 'danger');
+                return;
+            }
+
+            if (!email.includes('@') || email.length < 5) {
+                mostrarAlerta('⚠️ El formato del correo electrónico ingresado no es válido.', 'warning');
+                return;
+            }
+
+            // Simulación exitosa de feedback en pantalla (Clase 12)
+            mostrarAlerta(`🎉 <strong>¡Gracias ${nombre}!</strong> Tu mensaje fue enviado con éxito. Nuestro equipo se contactará a la brevedad. 🐾`, 'success');
+            
+            // Reiniciar campos tras el envío exitoso
+            formContacto.reset();
+        });
+    </script>
 </body>
 </html>

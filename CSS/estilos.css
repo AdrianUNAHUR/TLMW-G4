@@ -80,7 +80,7 @@ h1, h2, h3 {
     width: 60px;
     height: 5px;
     background: var(--color-acento);
-    margin: 10px auto 0 auto;
+    margin: 15px auto 25px auto;
     border-radius: 10px;
 }
 
@@ -88,7 +88,8 @@ h1, h2, h3 {
    3. MAQUETADO DE HEADER Y MENÚ FLOTANTE (Clase 9 - Position: Sticky)
    ========================================================================== */
 .header-principal {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(245, 251, 255, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px); /* Efecto vidrio esmerilado moderno */
     padding: 15px 0;
     box-shadow: var(--shadow-soft);
@@ -258,7 +259,7 @@ h1, h2, h3 {
 }
 
 .custom-shape-divider .shape-fill {
-    fill: #b0d6ef;
+    fill: #a3cfec;
 }
 
 /* ==========================================================================
@@ -272,6 +273,8 @@ h1, h2, h3 {
 }
 
 .impacto-item {
+    max-width: 320px;
+    margin: 0 auto;
     text-align: center;
     flex: 1 1 250px; /* Flex-grow, shrink y base dinámica (Clase 7) */
 }
@@ -457,8 +460,12 @@ h1, h2, h3 {
     box-shadow: var(--shadow-premium);
 }
 
+/* ==========================================================
+   ICONOS DE TARJETAS
+   ========================================================== */
+
 .icono-flotante {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 15px;
     display: inline-block;
     transition: var(--transition-smooth);
@@ -590,21 +597,45 @@ footer {
    ========================================================================== */
 .grid-equipo {
     display: grid;
-    /* Define columnas automáticas con tamaño mínimo de 260px que rellenan el flujo (Clase 9) */
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* 1. Mantenemos las columnas responsivas automáticas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 20px;
+    /* 2. SOLUCIÓN EXTRA: Evitamos que las tarjetas se estiren infinitamente a lo ancho en monitores gigantes */
+    max-width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
 }
-
 /* Tarjetas individuales del equipo con perspectiva para la animación del hover */
 .tarjeta-equipo {
-    background-color: var(--color-blanco);
+    background-color: #a6bfd4;
     border-radius: 14px;
     padding: 35px 25px;
     text-align: center;
     box-shadow: var(--shadow-soft);
     border: 1px solid rgba(0, 180, 216, 0.1);
     transition: var(--transition-smooth);
+    
+    /* Forzamos a que los elementos internos (h3, p) se organicen bien en vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center;     /* Centra el contenido horizontalmente */
+    min-height: 250px;       /* Le da una altura mínima para que nunca se aplaste en pantalla completa */
+}
+
+.tarjeta-equipo h3 {
+    font-size: 1.35rem;
+    margin-bottom: 15px; /* Un poquito más de espacio */
+    color: var(--color-oscuro);
+    width: 100%;        /* Asegura que ocupe todo el ancho disponible horizontal */
+}
+
+.tarjeta-equipo p {
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.6;    /* Espaciado de renglón cómodo para leer de izquierda a derecha */
+    width: 100%;        /* Asegura que el párrafo use el ancho horizontal de la tarjeta */
 }
 
 /* Efecto hover interactivo avanzado de transformación espacial */
@@ -634,6 +665,8 @@ footer {
 }
 
 .tarjeta-equipo p {
+    writing-mode: horizontal-tb; /* Fuerza escritura horizontal de izquierda a derecha */
+    white-space: normal;         /* Permite saltos de palabra normales, no letra por letra */
     font-size: 0.95rem;
     color: #6c757d;
 }
@@ -802,6 +835,10 @@ footer {
     margin-top: 40px;
 }
 
+.contenedor-tabla-seccion .container {
+    max-width: 900px;
+}
+
 /* Envoltura con propiedad de desplazamiento para que la tabla no rompa layouts móviles */
 .tabla-responsiva-contenedor {
     width: 100%;
@@ -857,6 +894,31 @@ footer {
     font-weight: 600;
 }
 
+/* Corrige badges dentro de tablas para que no floten */
+.tabla-estilo .badge {
+    position: static;
+    transform: none;
+}
+
+/* Aparición progresiva de etiquetas de frecuencia */
+.tabla-estilo .tag-tabla {
+    opacity: 0;
+    transform: translateY(8px);
+    animation: aparecerEtiqueta 1.5s ease forwards;
+}
+
+@keyframes aparecerEtiqueta {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .tag-semanal { background-color: #e0f2fe; color: #0369a1; }
 .tag-mensual { background-color: #fef3c7; color: #d97706; }
 .tag-bimensual { background-color: #e2e8f0; color: #475569; }
@@ -872,6 +934,10 @@ footer {
     font-family: var(--fuente-titulos);
     font-size: 1.1rem;
     color: var(--color-secundario);
+}
+
+.columna-frecuencia {
+    min-width: 180px;
 }
 
 /* ==========================================================================
@@ -964,7 +1030,7 @@ footer {
     box-shadow: 0 0 0 4px rgba(58, 134, 255, 0.15); /* Efecto halo de luz */
 }
 
-/* Área de texto con restricción de redimensionamiento horizontal */
+/* Área de texto con restriction de redimensionamiento horizontal */
 .textarea-formulario {
     resize: vertical;
     min-height: 120px;
@@ -1035,6 +1101,12 @@ footer {
    ========================================================================== */
 .info-contacto-sidebar {
     position: relative;
+}
+
+/* Sidebar fijo en pantallas grandes */
+.sidebar-contacto-sticky {
+    top: 6rem;
+    z-index: 3;
 }
 
 .tarjeta-lateral {
@@ -1146,7 +1218,7 @@ footer {
 }
 
 .datos-institucionales dd {
-    margin-left: 20;
+    margin-left: 20px;
     margin-bottom: 15px;
     color: var(--color-oscuro);
 }
@@ -1181,4 +1253,12 @@ footer {
 
 .navbar-toggler:focus {
     box-shadow: 0 0 0 4px rgba(58, 134, 255, 0.15);
+}
+
+/* ==========================================================
+   CONTENEDOR DE VIDEO
+   ========================================================== */
+
+.contenedor-video {
+    max-width: 800px;
 }
